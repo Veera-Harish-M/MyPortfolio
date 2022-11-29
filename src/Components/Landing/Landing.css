@@ -1,0 +1,19 @@
+.Landing {
+  width: 100%;
+  height: 100vh;
+}
+
+.Landing .typing-effect-text {
+  font-size: 1.5em;
+}
+
+.Landing .text-effect-box {
+  position: absolute;
+  margin-top: 15%;
+  margin-left: 5%;
+  color: white;
+}
+
+.Landing .name-text {
+  font-size: 2.5em;
+}
