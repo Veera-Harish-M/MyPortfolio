@@ -1,0 +1,62 @@
+.sectionClass {
+  position: relative;
+  width: 100%;
+  height: 200vh;
+  overflow: hidden;
+}
+.sectionClass .background-video {
+  height: 100vh;
+  width: 100vw;
+  object-fit: cover;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+@keyframes animatedBackground1 {
+  from {
+    background-position: 0 -10%;
+    background-size: 70%;
+  }
+  to {
+    background-position: 15% 4%;
+    background-size: 72%;
+  }
+}
+
+.sectionClass .text {
+  position: relative;
+  transform: skewY(345deg) translateY(-200px);
+  animation: animateColor 5s linear infinite;
+}
+@keyframes animateColor {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+.sectionClass .text h2 {
+  position: relative;
+  width: 100%;
+  font-size: 8em;
+  color: #fff;
+  pointer-events: none;
+  line-height: 1em;
+  white-space: nowrap;
+  text-shadow: calc(var(--x)) 100px 0 rgba(255, 255, 255, 0.1);
+  transform: translateX(calc(0% - var(--x) * var(--i)));
+}
+.sectionClass .text h2 span {
+  margin: 0 10px;
+  color: #0f0;
+}
+.sectionClass .text h2 span:nth-child(even) {
+  color: transparent;
+  -webkit-text-stroke: 2px #fff;
+}

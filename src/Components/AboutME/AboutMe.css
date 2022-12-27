@@ -1,0 +1,86 @@
+@import url(https://fonts.googleapis.com/css?family=PT+Sans+Narrow:700,400|Titillium+Web:400,600,700,300);
+
+.aboutme {
+  background: url("../../asserts/11111111111.png");
+  padding-top: 100px;
+  background-attachment: fixed;
+}
+
+.wrapper {
+  position: relative;
+  width: 850px;
+  height: 500px;
+  margin: 100px auto;
+  background: url("../../asserts/mee.png");
+  background-size: contain;
+  box-shadow: 0 5px 5px rgba(55, 55, 55, 0.4);
+}
+.wrapper .name {
+  position: absolute;
+  bottom: 10px;
+  left: 20px;
+  color: #fff;
+  font-size: 55px;
+  word-wrap: wrap;
+  padding: 10px;
+  font-family: "Titillium Web", sans-serif;
+  transition: all 0.4s ease-in-out;
+}
+.wrapper .name:hover {
+  cursor: default;
+  transform: translateX(-20px);
+}
+.wrapper .name:first-letter {
+  font-size: 100px;
+}
+.content {
+  position: absolute;
+  right: 20px;
+  top: -50px;
+  width: 400px;
+  height: 120%;
+  padding: 30px;
+  background: #fff;
+  box-shadow: 0 0 4px rgba(55, 55, 55, 0.3);
+  border-radius: 5px;
+}
+.content h2 {
+  color: #444;
+  font-size: 26px;
+}
+.content p {
+  color: #999;
+  font-size: 14px;
+}
+.content .links {
+  margin: 30px 0px 50px;
+}
+.content .links a {
+  display: block;
+  margin: 10px 0;
+  font-size: 15px;
+  text-decoration: none;
+  color: #333;
+}
+.content .links a:before {
+  font-family: "FontAwesome";
+  content: "\f0c1";
+  font-size: 11px;
+  padding-right: 10px;
+}
+.content .links a.location:before {
+  content: "\f124";
+}
+.content .stats {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  margin-top: 30px;
+}
+.content .stats .num {
+  font-size: 25px;
+  letter-spacing: 2px;
+}
+.content .stats .text {
+  color: #999;
+}

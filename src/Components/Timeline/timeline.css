@@ -1,0 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@700&display=swap");
+
+.title {
+  font-size: 6rem;
+  text-align: center;
+  padding-top: 30px;
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  background: -webkit-linear-gradient(#ffffff, #3ad4f8);
+  background: linear-gradient(#ffffff, #3ad4f8);
+  background-clip: text;
+  text-transform: uppercase;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 1rem rgb(177, 175, 175));
+}

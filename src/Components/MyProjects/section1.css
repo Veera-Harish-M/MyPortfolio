@@ -1,0 +1,92 @@
+.sectionProject1 {
+  height: 200vh;
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+}
+
+.getlink {
+  margin-left: 60px;
+  padding-top: 400px;
+}
+.getlinktext {
+  padding-left: 109px;
+  font-size: 30px;
+  color: #000000ad;
+  padding-bottom: 40px;
+  animation: animatedText1 1s infinite;
+}
+@keyframes animatedText1 {
+  from {
+    color: #000000ad;
+  }
+  to {
+    color: #efefefad;
+  }
+}
+
+.textTrans:hover {
+  color: rgba(217, 217, 217, 0.911);
+}
+.iphone-1 {
+  position: absolute;
+  width: 25%;
+  height: 60%;
+  top: 19%;
+  right: 35%;
+  background-color: black;
+  border-radius: 50px;
+}
+
+.iphone-1-border {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  /* z-index: 1; */
+}
+.iphone-1-content {
+  position: absolute;
+  width: 95%;
+  height: 100%;
+  top: 0;
+  left: 8px;
+  /* z-index: 0;*/
+  border-radius: 40px;
+}
+.iphone-1 iframe {
+  border-radius: 30px;
+}
+
+.androidphone {
+  position: absolute;
+  right: 7%;
+  top: 0;
+  width: 25%;
+  height: 47%;
+}
+
+.androidphone-border {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 5px;
+  /* top: 16px; */
+  /* z-index: 1;*/
+}
+
+.androidphone-content {
+  position: absolute;
+  top: 0;
+  left: 8px;
+  /* z-index: 0; */
+  width: 95%;
+  height: 95%;
+}
+
+.androidphone img,
+iframe {
+  object-fit: cover;
+  border-radius: 0px 0px 30px 30px;
+}

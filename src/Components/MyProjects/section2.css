@@ -1,0 +1,20 @@
+.phoneOne {
+  position: absolute;
+  width: 300px;
+  left: 380px;
+  top: 155px;
+  transform: rotate(34deg);
+}
+
+.phoneTwo {
+  top: 108px;
+  position: absolute;
+  width: 300px;
+  left: -18px;
+  transform: rotate(34deg);
+}
+
+.section2 {
+  margin-top: 150vh;
+  position: absolute;
+}

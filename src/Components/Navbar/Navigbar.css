@@ -1,0 +1,14 @@
+
+.navbarCust{
+	position: absolute;
+	background-color: transparent !important;
+	align-items: flex-end;
+	
+	
+}
+
+.navbarCust a{
+	color:white !important;
+	margin-left: 20px;
+	
+}

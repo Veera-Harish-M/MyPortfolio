@@ -1,19 +1,107 @@
 .Landing {
-  width: 100%;
-  height: 100vh;
-}
-
-.Landing .typing-effect-text {
-  font-size: 1.5em;
-}
-
-.Landing .text-effect-box {
-  position: absolute;
-  margin-top: 15%;
-  margin-left: 5%;
   color: white;
 }
 
-.Landing .name-text {
-  font-size: 2.5em;
+.Landing .typing-effect-text {
+  font-size: 1.5rem !important;
+  margin-top: 20px;
 }
+.Landing .typing-effect-text span {
+  margin-top: 20px;
+}
+.Landing .text-effect-box {
+  position: absolute;
+  margin-top: 250;
+  margin-left: 5%;
+  color: white;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+
+.Landing .name-text {
+  margin: 0;
+  padding: 0;
+  font-size: 3rem !important;
+  font-weight: bold;
+  font-family: sans-serif;
+  color: transparent;
+  -webkit-text-stroke: 2px #44c9e6;
+}
+
+.Landing .name-text1 {
+  margin: 0;
+  padding: 0;
+  font-size: 3rem !important;
+  font-weight: bold;
+  font-family: sans-serif;
+  color: #a1ebfc;
+  position: absolute;
+  transform: translateY(-100%);
+  animation: animate 4s ease-in-out infinite;
+}
+
+.Landing .allText {
+  -webkit-animation: animatedBackground 2s ease-in-out infinite;
+  animation: animatedBackground 2s ease-in-out infinite alternate;
+}
+
+@keyframes animate {
+  0%,
+  100% {
+    clip-path: polygon(
+      0% 45%,
+      15% 44%,
+      32% 50%,
+      54% 60%,
+      70% 61%,
+      84% 59%,
+      100% 52%,
+      100% 100%,
+      0% 100%
+    );
+  }
+  50% {
+    clip-path: polygon(
+      0 60%,
+      16% 65%,
+      34% 66%,
+      51% 62%,
+      67% 50%,
+      84% 45%,
+      100% 46%,
+      100% 100%,
+      0% 100%
+    );
+  }
+}
+
+@keyframes animatedBackground {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 15% 4%;
+  }
+}
+
+/* .Landing .name-text:before {
+  content: "Veera";
+  position: absolute;
+  top: -20%;
+  left: 150%;
+  
+  color: transparent;
+  -webkit-text-stroke: 0.5px white;
+  width: 0;
+  overflow: hidden;
+  transition: all;
+  transform: scale(400%);
+}
+
+.Landing .name-text:hover:before {
+  overflow: hidden;
+  width: 80%;
+  left: 150%;
+  transform: scale(400%);
+  overflow: hidden;
+} */
