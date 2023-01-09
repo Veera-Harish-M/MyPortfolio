@@ -1,0 +1,50 @@
+.section4 {
+  position: relative;
+  height: 200vh;
+  overflow: hidden;
+}
+.section4 .projectNameText .textTrans {
+  font-size: 95px;
+}
+
+.section4 .projectNameText {
+  color: rgba(161, 161, 161, 0.5);
+  text-align: right;
+  position: absolute;
+  margin-top: 415px;
+  right: 30px;
+}
+.section4 .image1 {
+  position: absolute;
+  width: 100%;
+}
+.section4 .image2 {
+  position: absolute;
+  width: 100%;
+}
+.section4 .image3 {
+  position: absolute;
+  width: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+  .section4 .projectNameText .textTrans {
+    font-size: 40px;
+  }
+  .section4 {
+    height: 120vh;
+  }
+  .section4 .projectNameText {
+    margin-top: 293px;
+  }
+
+  .section4 .image1 {
+    width: 150%;
+  }
+  .section4 .image2 {
+    width: 150%;
+  }
+  .section4 .image3 {
+    width: 150%;
+  }
+}

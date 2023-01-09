@@ -20,18 +20,10 @@ export class Section2 extends Component {
             alt="app demo-1 border"
           />
         </div>
-        <div
-          style={{
-            position: "absolute",
-            left: "593px",
-            top: "429px",
-            color: "rgba(161, 161, 161, 0.5)",
-            textAlign: "right",
-            zIndex: 1,
-          }}
-        >
-          <b className="textTrans" style={{ fontSize: "95px" }}>
-            Message Translator
+        <div className="textProjectName">
+          <b className="textTrans">
+            Message <br />
+            Translator
           </b>
           <br />
           <a

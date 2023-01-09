@@ -1,3 +1,7 @@
+.footer {
+  margin-top: 50px;
+}
+
 .social {
   text-align: center;
   font-size: 2.5em;
@@ -25,23 +29,40 @@
   size: 30px;
 }
 .social i#twitter:hover {
-  color: #77ddf6;
+  color: #ed780e;
 }
 .social i#github:hover {
-  color: black;
+  color: #ed780e;
 }
 .social i#linkedin:hover {
-  color: #0177b5;
+  color: #ed780e;
 }
 .social i#code:hover {
-  color: #29a329;
+  color: #ed780e;
 }
 .social i#stack:hover {
   color: #ed780e;
 }
 .social i#plus:hover {
-  color: #d43402;
+  color: #ed780e;
 }
 .social i#mail:hover {
   color: #f7b401;
+}
+
+.footer .textTrans {
+  font-size: 95px;
+}
+
+@media only screen and (max-width: 500px) {
+  .footer {
+    margin-top: 150vh;
+  }
+  .footer .textTrans {
+    font-size: 50px;
+  }
+
+  .social {
+    margin-top: 5em;
+  }
 }

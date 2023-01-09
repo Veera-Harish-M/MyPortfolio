@@ -8,7 +8,7 @@
 
 .wrapper {
   position: relative;
-  width: 850px;
+  width: 100%;
   height: 500px;
   margin: 100px auto;
   background: url("../../asserts/mee.png");
@@ -83,4 +83,24 @@
 }
 .content .stats .text {
   color: #999;
+}
+
+@media only screen and (max-width: 500px) {
+  .wrapper {
+    width: 100%;
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+  }
+  .content {
+    position: absolute;
+    right: none;
+    left: none;
+    top: 463px;
+    width: 90%;
+    height: 145%;
+    background: #fff;
+    box-shadow: 0 0 4px rgb(55 55 55 / 30%);
+    border-radius: 5px;
+  }
 }

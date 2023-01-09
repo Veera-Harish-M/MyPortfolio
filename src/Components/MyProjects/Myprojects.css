@@ -1,5 +1,7 @@
 .myProjects {
-  height: 900vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
 }
 
 .myProjects .background-video11 {

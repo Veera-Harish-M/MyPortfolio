@@ -5,7 +5,6 @@ import {
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import Atlan from "../../asserts/atlan2.png";
-
 import Logo from "../../asserts/logo.png";
 
 import { FaNodeJs, FaReact } from "react-icons/fa";
@@ -47,10 +46,8 @@ export default function Timeline() {
       style={{
         background: `url(${Atlan})`,
         "--line-color": "transparent",
-        backgroundSize: "cover",
-        backgroundAttachment: "fixed",
-        width: "100%",
       }}
+      className="TimelineClass"
     >
       <div className="title">Life of Veera</div>
       <VerticalTimeline>

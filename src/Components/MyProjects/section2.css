@@ -1,12 +1,17 @@
-.phoneOne {
-  position: absolute;
+.section2 {
+  position: relative;
+  height: 200vh;
+}
+
+.section2 .phoneOne {
   width: 300px;
   left: 380px;
   top: 155px;
   transform: rotate(34deg);
+  position: absolute;
 }
 
-.phoneTwo {
+.section2 .phoneTwo {
   top: 108px;
   position: absolute;
   width: 300px;
@@ -14,7 +19,80 @@
   transform: rotate(34deg);
 }
 
-.section2 {
-  margin-top: 150vh;
+.section2 .textProjectName {
   position: absolute;
+  top: 429px;
+  color: rgba(161, 161, 161, 0.5);
+  text-align: right;
+  z-index: 1;
+  right: 30px;
+}
+.section2 .textProjectName .textTrans {
+  font-size: 95px;
+}
+.section2 .textProjectName .textTrans:hover {
+  color: rgba(217, 217, 217, 0.911);
+}
+
+@media only screen and (max-width: 500px) {
+  .section2 {
+    height: 230vh;
+  }
+  .section2 .phoneOne {
+    width: 200px;
+    left: 0px;
+    top: 603px;
+    transform: rotate(39deg);
+    position: absolute;
+  }
+  .section2 .phoneTwo {
+    top: 121px;
+    position: absolute;
+    width: 200px;
+    left: -18px;
+    transform: rotate(39deg);
+  }
+
+  .section2 .textProjectName {
+    position: absolute;
+    left: 0;
+    top: 429px;
+    color: rgba(161, 161, 161, 0.5);
+    right: 21px;
+    text-align: right;
+    z-index: 1;
+  }
+  .section2 .textProjectName .textTrans {
+    font-size: 55px;
+  }
+}
+@media only screen and (min-width: 500px) and (max-width: 850px) {
+  .section2 .phoneOne {
+    width: 257px;
+    left: 0px;
+    top: 495px;
+    transform: rotate(39deg);
+    position: absolute;
+  }
+  .section2 .phoneTwo {
+    top: 0;
+    position: absolute;
+    width: 257px;
+    left: -18px;
+    transform: rotate(39deg);
+  }
+
+  .section2 .textProjectName {
+    position: absolute;
+    left: 0;
+    top: 233px;
+    color: rgba(161, 161, 161, 0.5);
+    right: 21px;
+    text-align: right;
+    z-index: 1;
+  }
+
+  .section2 .textProjectName .textTrans {
+    font-size: 82px;
+  }
 }

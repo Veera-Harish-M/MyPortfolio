@@ -1,15 +1,14 @@
 .sectionProject1 {
   height: 200vh;
-  position: absolute;
   overflow: hidden;
   width: 100%;
+  position: relative;
 }
 
-.getlink {
-  margin-left: 60px;
+.sectionProject1 .getlink {
   padding-top: 400px;
 }
-.getlinktext {
+.sectionProject1 .getlinktext {
   padding-left: 109px;
   font-size: 30px;
   color: #000000ad;
@@ -25,20 +24,23 @@
   }
 }
 
-.textTrans:hover {
+.sectionProject1 .textTrans {
+  font-size: 95px;
+}
+.sectionProject1 .textTrans:hover {
   color: rgba(217, 217, 217, 0.911);
 }
-.iphone-1 {
+.sectionProject1 .iphone-1 {
   position: absolute;
-  width: 25%;
-  height: 60%;
+  width: 280px;
+  height: 550px;
   top: 19%;
   right: 35%;
   background-color: black;
   border-radius: 50px;
 }
 
-.iphone-1-border {
+.sectionProject1 .iphone-1-border {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -46,7 +48,7 @@
   top: 0;
   /* z-index: 1; */
 }
-.iphone-1-content {
+.sectionProject1 .iphone-1-content {
   position: absolute;
   width: 95%;
   height: 100%;
@@ -55,19 +57,19 @@
   /* z-index: 0;*/
   border-radius: 40px;
 }
-.iphone-1 iframe {
+.sectionProject1 .iphone-1 iframe {
   border-radius: 30px;
 }
 
-.androidphone {
+.sectionProject1 .androidphone {
   position: absolute;
   right: 7%;
   top: 0;
-  width: 25%;
-  height: 47%;
+  width: 270px;
+  height: 441px;
 }
 
-.androidphone-border {
+.sectionProject1 .androidphone-border {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -76,7 +78,7 @@
   /* z-index: 1;*/
 }
 
-.androidphone-content {
+.sectionProject1 .androidphone-content {
   position: absolute;
   top: 0;
   left: 8px;
@@ -85,8 +87,167 @@
   height: 95%;
 }
 
-.androidphone img,
+.sectionProject1 .androidphone img,
 iframe {
   object-fit: cover;
   border-radius: 0px 0px 30px 30px;
+}
+
+.sectionProject1 .myWorks {
+  margin-top: 100px;
+}
+.sectionProject1 .my {
+  font-size: 150px;
+  margin-left: 88px;
+}
+.sectionProject1 .works {
+  font-size: 150px;
+  padding-left: 280px;
+}
+
+.sectionProject1 .projectName {
+  position: absolute;
+  top: 30%;
+  left: 3%;
+  color: rgb(161 161 161 / 50%);
+  z-index: 1;
+}
+
+@media only screen and (min-width: 530px) and (max-width: 990px) {
+  .sectionProject1 {
+    height: 130vh;
+  }
+  .sectionProject1 .androidphone {
+    width: 200px;
+    height: 330px;
+  }
+
+  .sectionProject1 .iphone-1 {
+    width: 200px;
+    height: 428px;
+    top: 19%;
+    right: 45%;
+  }
+  .sectionProject1 .myWorks {
+    margin-top: 216px;
+  }
+  .sectionProject1 .getlinktext {
+    padding-left: 61px;
+  }
+  .sectionProject1 .my {
+    font-size: 80px;
+    margin-left: 234px;
+  }
+  .sectionProject1 .works {
+    font-size: 124px;
+    padding-left: 0px;
+  }
+  .sectionProject1 .projectName {
+    position: absolute;
+    top: 11%;
+    left: 12%;
+  }
+  .sectionProject1 .textTrans {
+    font-size: 50px;
+  }
+}
+
+@media only screen and (min-width: 450px) and (max-width: 530px) {
+  .sectionProject1 .iphone-1 {
+    width: 280px;
+    height: 550px;
+    top: 54%;
+    right: 35%;
+  }
+  .sectionProject1 .textTrans {
+    font-size: 80px;
+  }
+  .sectionProject1 .projectName {
+    top: 34%;
+  }
+  .sectionProject1 .myWorks {
+    margin-top: 137px;
+  }
+  .sectionProject1 .getlinktext {
+    padding-left: 71px;
+  }
+  .sectionProject1 .my {
+    font-size: 80px;
+    margin-left: 0px;
+  }
+  .sectionProject1 .works {
+    font-size: 100px;
+    padding-left: 0px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .sectionProject1 .iphone-1 {
+    width: 280px;
+    height: 550px;
+    top: 46%;
+    right: 7%;
+  }
+  .sectionProject1 {
+    height: 300vh;
+  }
+  .sectionProject1 .textTrans {
+    font-size: 59px;
+  }
+  .sectionProject1 .projectName {
+    top: 91%;
+    width: 100%;
+    text-align: center;
+    left: 0;
+  }
+
+  .sectionProject1 .myWorks {
+    margin-top: 48px;
+    width: 100%;
+    text-align: center;
+  }
+  .sectionProject1 .getlinktext {
+    padding-left: 0px;
+  }
+  .sectionProject1 .works {
+    font-size: 70px;
+    padding-left: 0px;
+  }
+  .sectionProject1 .my {
+    font-size: 60px;
+    margin-left: 0px;
+  }
+}
+
+@media only screen and (min-width: 1300px) {
+  .sectionProject1 .my {
+    position: absolute;
+    left: 30%;
+    margin-left: 0;
+  }
+  .sectionProject1 .works {
+    position: absolute;
+    right: 3%;
+  }
+}
+
+@media only screen and (min-width: 990px) and (max-width: 1300px) {
+  .sectionProject1 .my {
+    position: absolute;
+    left: 20%;
+    margin-left: 0;
+  }
+  .sectionProject1 .works {
+    position: absolute;
+    right: 3%;
+  }
+  .sectionProject1 {
+    height: 200vh;
+  }
+}
+
+@media only screen and (min-width: 990px) and (max-width: 1000px) {
+  .sectionProject1 {
+    height: 110vh;
+  }
 }

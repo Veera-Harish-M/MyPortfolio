@@ -1,19 +1,19 @@
 import React, { Component } from "react";
 import { BsGithub } from "react-icons/bs";
-
+import "./section5.css";
 export default class Section5 extends Component {
   render() {
     return (
-      <div style={{ position: "absolute", marginTop: "650vh" }}>
+      <div className="section5">
         <div
           data-aos="fade-up-right"
           data-aos-duration="1000"
           data-aos-easing="linear"
         >
           <img
-            style={{ position: "absolute", top: "193px", left: "-320px" }}
+            className="image1"
             src={require("../../asserts/mobile123.png")}
-            alt="app demo-1 border"
+            alt="project-Image1"
           />
         </div>
         <div
@@ -22,9 +22,9 @@ export default class Section5 extends Component {
           data-aos-easing="linear"
         >
           <img
-            style={{ position: "absolute", top: "-203px", left: "315px" }}
+            className="image2"
             src={require("../../asserts/mobile1231.png")}
-            alt="app demo-1 border"
+            alt="project-Image2"
           />
         </div>
         <div
@@ -33,9 +33,9 @@ export default class Section5 extends Component {
           data-aos-easing="linear"
         >
           <img
-            style={{ position: "absolute", top: "-3px", left: "309px" }}
+            className="image3"
             src={require("../../asserts/mobile1232.png")}
-            alt="app demo-1 border"
+            alt="project-Image3"
           />
         </div>
         <div
@@ -44,9 +44,9 @@ export default class Section5 extends Component {
           data-aos-easing="linear"
         >
           <img
-            style={{ position: "absolute" }}
+            className="image4"
             src={require("../../asserts/mobile1233.png")}
-            alt="app demo-1 border"
+            alt="project-Image4"
           />
         </div>
         <div
@@ -55,9 +55,9 @@ export default class Section5 extends Component {
           data-aos-easing="linear"
         >
           <img
-            style={{ position: "absolute", top: "190px" }}
+            className="image5"
             src={require("../../asserts/mobile1234.png")}
-            alt="app demo-1 border"
+            alt="project-Image5"
           />
         </div>
         <div
@@ -66,21 +66,13 @@ export default class Section5 extends Component {
           data-aos-easing="linear"
         >
           <img
-            style={{ position: "absolute" }}
+            className="image6"
             src={require("../../asserts/mobile1235.png")}
-            alt="app demo-1 border"
+            alt="project-Image6"
           />
         </div>
-        <div
-          style={{
-            color: "rgba(161, 161, 161, 0.5)",
-            textAlign: "right",
-            position: "absolute",
-            left: "688px",
-            top: "137px",
-          }}
-        >
-          <b className="textTrans" style={{ fontSize: "95px" }}>
+        <div className="projectTextName">
+          <b className="textTrans">
             Automatic
             <br />
             Attendance

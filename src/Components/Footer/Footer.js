@@ -4,7 +4,7 @@ import "./footer.css";
 export default class Footer extends Component {
   render() {
     return (
-      <div style={{ marginTop: "50px" }}>
+      <div className="footer">
         <div
           style={{
             position: "absolute",
@@ -14,7 +14,7 @@ export default class Footer extends Component {
             zIndex: 1,
           }}
         >
-          <b className="textTrans" style={{ fontSize: "95px" }}>
+          <b className="textTrans">
             Let's have a <b className="coffee">coffee</b>?
           </b>
         </div>

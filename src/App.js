@@ -10,7 +10,7 @@ import AboutMe from "./Components/AboutME/AboutMe";
 
 export default function App() {
   return (
-    <div>
+    <div style={{ width: "100%" }}>
       <AnimatedCursor
         innerSize={20}
         outerSize={40}
@@ -28,3 +28,5 @@ export default function App() {
     </div>
   );
 }
+
+/*generate fibonacci*/

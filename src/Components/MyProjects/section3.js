@@ -1,29 +1,21 @@
 import React, { Component } from "react";
 import printer from "../../asserts/printer.mp4";
 import { BsGithub } from "react-icons/bs";
-
+import "./section3.css";
 export default class Section3 extends Component {
   render() {
     return (
-      <div style={{ position: "absolute" }}>
+      <div className="section3">
         <video
-          style={{ width: "100%", marginTop: "310vh" }}
+          style={{ width: "100%" }}
           src={printer}
           type="video/mp4"
           autoPlay={true}
           loop
           muted
         ></video>
-        <div
-          style={{
-            marginRight: "40px",
-            color: "rgba(161, 161, 161, 0.5)",
-            textAlign: "right",
-          }}
-        >
-          <b className="textTrans" style={{ fontSize: "95px" }}>
-            Ecommerce Website
-          </b>
+        <div className="projectText">
+          <b className="textTrans">Ecommerce Website</b>
           <br />
           <a
             href="https://github.com/Veera-Harish-M/printing_press"

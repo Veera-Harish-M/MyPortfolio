@@ -10,7 +10,7 @@ export default class AboutMe extends Component {
         style={{
           width: "100%",
           position: "absolute",
-          marginTop: "495px",
+          marginTop: "150px",
           display: "flex",
           flexDirection: "column",
           backgroundColor: "blue",

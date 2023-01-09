@@ -84,24 +84,48 @@
   }
 }
 
-/* .Landing .name-text:before {
-  content: "Veera";
-  position: absolute;
-  top: -20%;
-  left: 150%;
-  
-  color: transparent;
-  -webkit-text-stroke: 0.5px white;
-  width: 0;
-  overflow: hidden;
-  transition: all;
-  transform: scale(400%);
+@media only screen and (max-width: 450px) {
+  @keyframes animatedBackground {
+    from {
+      background-position: 0 0;
+    }
+    to {
+      background-position: 2% 2%;
+    }
+  }
+
+  .Landing .text-effect-box {
+    margin-top: 70% !important;
+  }
+
+  .Landing .name-text1 {
+    font-size: 2.5rem !important;
+  }
+
+  .Landing .name-text {
+    font-size: 2.5rem !important;
+  }
 }
 
-.Landing .name-text:hover:before {
-  overflow: hidden;
-  width: 80%;
-  left: 150%;
-  transform: scale(400%);
-  overflow: hidden;
-} */
+@media only screen and (min-width: 600px) and (max-width: 800px) {
+  @keyframes animatedBackground {
+    from {
+      background-position: 0 0;
+    }
+    to {
+      background-position: 5% 5%;
+    }
+  }
+
+  .Landing .text-effect-box {
+    margin-top: 56% !important;
+  }
+
+  .Landing .name-text1 {
+    font-size: 3rem !important;
+  }
+
+  .Landing .name-text {
+    font-size: 3rem !important;
+  }
+}

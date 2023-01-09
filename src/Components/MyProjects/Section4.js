@@ -1,17 +1,17 @@
 import React, { Component } from "react";
 import { BsGithub, BsFillArrowUpRightCircleFill } from "react-icons/bs";
-
+import "./section4.css";
 export default class Section4 extends Component {
   render() {
     return (
-      <div style={{ position: "absolute", marginTop: "470vh" }}>
+      <div className="section4">
         <div
           data-aos="fade-up-right"
           data-aos-duration="1000"
           data-aos-easing="linear"
         >
           <img
-            style={{ position: "absolute" }}
+            className="image1"
             src={require("../../asserts/laptop.png")}
             alt="app demo-1 border"
           />
@@ -22,7 +22,7 @@ export default class Section4 extends Component {
           data-aos-easing="linear"
         >
           <img
-            style={{ position: "absolute" }}
+            className="image2"
             src={require("../../asserts/mobile.png")}
             alt="app demo-1 border"
           />
@@ -33,22 +33,15 @@ export default class Section4 extends Component {
           data-aos-easing="linear"
         >
           <img
-            style={{ position: "absolute" }}
+            className="image3"
             src={require("../../asserts/tab.png")}
             alt="app demo-1 border"
           />
         </div>
-        <div
-          style={{
-            color: "rgba(161, 161, 161, 0.5)",
-            textAlign: "right",
-            position: "absolute",
-            marginTop: "415px",
-            marginLeft: "613px",
-          }}
-        >
-          <b className="textTrans" style={{ fontSize: "95px" }}>
-            Application Wingman
+        <div className="projectNameText">
+          <b className="textTrans">
+            Application <br />
+            Wingman
           </b>
           <br />
           <a

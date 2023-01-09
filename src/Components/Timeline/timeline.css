@@ -13,3 +13,28 @@
   -webkit-text-fill-color: transparent;
   filter: drop-shadow(0 0 1rem rgb(177, 175, 175));
 }
+
+.TimelineClass {
+  background-size: cover !important;
+  background-attachment: fixed !important;
+  width: 100%;
+}
+
+@media only screen and (max-width: 450px) {
+  .TimelineClass {
+    background-position: center !important;
+  }
+
+  .title {
+    font-size: 4.5rem;
+  }
+}
+@media only screen and (min-width: 600px) and (max-width: 800px) {
+  .TimelineClass {
+    background-position: center;
+  }
+
+  .title {
+    font-size: 5rem;
+  }
+}
