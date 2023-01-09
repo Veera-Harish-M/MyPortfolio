@@ -1,7 +1,6 @@
 import Landing from "./Components/Landing/Landing";
 import "./App.css";
 import Myprojects from "./Components/MyProjects/Myprojects";
-
 import Navigbar from "./Components/Navbar/Navigbar";
 import AnimatedCursor from "react-animated-cursor";
 import Banner from "./Components/Banner/Banner";
@@ -28,5 +27,3 @@ export default function App() {
     </div>
   );
 }
-
-/*generate fibonacci*/
