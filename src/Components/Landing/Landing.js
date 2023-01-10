@@ -1,4 +1,4 @@
-import Spline from "@splinetool/react-spline";
+// import Spline from "@splinetool/react-spline";
 
 import ReactTypingEffect from "react-typing-effect";
 import "./Landing.css";
