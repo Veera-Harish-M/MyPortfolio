@@ -71,25 +71,29 @@ export default function Loading() {
   const [image8, setImage8] = useState(Img8);
 
   useEffect(() => {
-    setInterval(() => {
-      var a = [];
-      for (var i = 0; i < 8; i++) {
-        var t = Math.floor(Math.random() * 25);
-        while (a.includes(t)) {
-          t = Math.floor(Math.random() * 25);
+    const starting = () => {
+      setInterval(() => {
+        var a = [];
+        for (var i = 0; i < 8; i++) {
+          var t = Math.floor(Math.random() * 25);
+          while (a.includes(t)) {
+            t = Math.floor(Math.random() * 25);
+          }
+          a[i] = t;
         }
-        a[i] = t;
-      }
-      setImage1(imgs[a[0]]);
-      setImage2(imgs[a[3]]);
-      setImage3(imgs[a[2]]);
-      setImage4(imgs[a[7]]);
+        setImage1(imgs[a[0]]);
+        setImage2(imgs[a[3]]);
+        setImage3(imgs[a[2]]);
+        setImage4(imgs[a[7]]);
 
-      setImage5(imgs[a[4]]);
-      setImage6(imgs[a[1]]);
-      setImage7(imgs[a[6]]);
-      setImage8(imgs[a[5]]);
-    }, 2000);
+        setImage5(imgs[a[4]]);
+        setImage6(imgs[a[1]]);
+        setImage7(imgs[a[6]]);
+        setImage8(imgs[a[5]]);
+      }, 2000);
+    };
+    starting();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   if (window.innerWidth < 600) {
@@ -145,7 +149,7 @@ export default function Loading() {
       <Container className="Landing">
         <div className="LandingText">
           <Spinner className="LoadingSpinner" animation="border" />
-          <span className="Ltext">Loading...</span>
+          <span className="Ltext"> Loading...</span>
         </div>
         <Row>
           <Col>
