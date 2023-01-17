@@ -3,7 +3,12 @@ import "./Section6.css";
 export default function Section6() {
   return (
     <div className="section6">
-      <div className="projectTextName">
+      <div
+        className="projectTextName"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+        data-aos-easing="linear"
+      >
         <b className="textTrans">See My Other Works!</b>
       </div>
       <div className="subsection6">
@@ -17,7 +22,10 @@ export default function Section6() {
             >
               <div class="userdetails">
                 <div class="imgbox">
-                  <img src={require("../../asserts/react_icon.png")} alt="" />
+                  <img
+                    src={require("../../asserts/project/logo/react_icon.png")}
+                    alt="react"
+                  />
                 </div>
                 <div class="review">
                   <h4>Netflix clone</h4>
@@ -35,8 +43,8 @@ export default function Section6() {
               <div class="userdetails">
                 <div class="imgbox">
                   <img
-                    src={require("../../asserts/android_studio.webp")}
-                    alt=""
+                    src={require("../../asserts/project/logo/android_studio.webp")}
+                    alt="android"
                   />
                 </div>
 
@@ -54,7 +62,10 @@ export default function Section6() {
             >
               <div class="userdetails">
                 <div class="imgbox">
-                  <img src={require("../../asserts/javascript.png")} alt="" />
+                  <img
+                    src={require("../../asserts/project/logo/javascript.png")}
+                    alt="js"
+                  />
                 </div>
 
                 <div class="review dark">
@@ -75,8 +86,8 @@ export default function Section6() {
               <div class="userdetails">
                 <div class="imgbox">
                   <img
-                    src={require("../../asserts/android_studio.webp")}
-                    alt=""
+                    src={require("../../asserts/project/logo/android_studio.webp")}
+                    alt="android"
                   />
                 </div>
 
@@ -94,7 +105,10 @@ export default function Section6() {
             >
               <div class="userdetails">
                 <div class="imgbox">
-                  <img src={require("../../asserts/react_icon.png")} alt="" />
+                  <img
+                    src={require("../../asserts/project/logo/react_icon.png")}
+                    alt="react"
+                  />
                 </div>
 
                 <div class="review">
@@ -116,7 +130,10 @@ export default function Section6() {
               <div style={{ background: "black" }}></div>
               <div class="userdetails">
                 <div class="imgbox">
-                  <img src={require("../../asserts/react_icon.png")} alt="" />
+                  <img
+                    src={require("../../asserts/project/logo/react_icon.png")}
+                    alt="react"
+                  />
                 </div>
 
                 <div class="review">
@@ -137,7 +154,10 @@ export default function Section6() {
             >
               <div class="userdetails">
                 <div class="imgbox">
-                  <img src={require("../../asserts/ml.png")} alt="" />
+                  <img
+                    src={require("../../asserts/project/logo/ml.png")}
+                    alt="ML"
+                  />
                 </div>
 
                 <div class="review">
@@ -157,7 +177,10 @@ export default function Section6() {
             >
               <div class="userdetails">
                 <div class="imgbox">
-                  <img src={require("../../asserts/react_icon.png")} alt="" />
+                  <img
+                    src={require("../../asserts/project/logo/react_icon.png")}
+                    alt="react"
+                  />
                 </div>
 
                 <div class="review dark">
@@ -174,7 +197,10 @@ export default function Section6() {
             >
               <div class="userdetails">
                 <div class="imgbox">
-                  <img src={require("../../asserts/python_logo.webp")} alt="" />
+                  <img
+                    src={require("../../asserts/project/logo/python_logo.webp")}
+                    alt="python"
+                  />
                 </div>
 
                 <div class="review dark">
@@ -191,7 +217,10 @@ export default function Section6() {
             >
               <div class="userdetails">
                 <div class="imgbox">
-                  <img src={require("../../asserts/react_icon.png")} alt="" />
+                  <img
+                    src={require("../../asserts/project/logo/react_icon.png")}
+                    alt="react"
+                  />
                 </div>
                 <div class="review">
                   <h4>Video Player Application</h4>

@@ -9,14 +9,14 @@ export class Section2 extends Component {
         <div data-aos="fade-up-right" data-aos-duration="2000">
           <img
             className="phoneOne"
-            src={require("../../asserts/message1.png")}
+            src={require("../../asserts/project/section2/message1.png")}
             alt="app demo-1 border"
           />
         </div>
         <div data-aos="fade-up-right" data-aos-duration="1000">
           <img
             className="phoneTwo"
-            src={require("../../asserts/message2.png")}
+            src={require("../../asserts/project/section2/message2.png")}
             alt="app demo-1 border"
           />
         </div>

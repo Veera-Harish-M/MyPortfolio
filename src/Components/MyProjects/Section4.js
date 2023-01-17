@@ -12,7 +12,7 @@ export default class Section4 extends Component {
         >
           <img
             className="image1"
-            src={require("../../asserts/laptop.png")}
+            src={require("../../asserts/project/section4/section4-laptop.png")}
             alt="app demo-1 border"
           />
         </div>
@@ -23,7 +23,7 @@ export default class Section4 extends Component {
         >
           <img
             className="image2"
-            src={require("../../asserts/mobile.png")}
+            src={require("../../asserts/project/section4/section4-mobile.png")}
             alt="app demo-1 border"
           />
         </div>
@@ -34,7 +34,7 @@ export default class Section4 extends Component {
         >
           <img
             className="image3"
-            src={require("../../asserts/tab.png")}
+            src={require("../../asserts/project/section4/section4-tab.png")}
             alt="app demo-1 border"
           />
         </div>

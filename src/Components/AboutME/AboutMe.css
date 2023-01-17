@@ -1,9 +1,10 @@
 @import url(https://fonts.googleapis.com/css?family=PT+Sans+Narrow:700,400|Titillium+Web:400,600,700,300);
 
 .aboutme {
-  background: url("../../asserts/11111111111.png");
+  background: url("../../asserts/backgrounds/aboutme.png");
   padding-top: 100px;
   background-attachment: fixed;
+  background-size: cover;
 }
 
 .wrapper {
@@ -11,7 +12,7 @@
   width: 80%;
   height: 500px;
   margin: 100px auto;
-  background: url("../../asserts/mee.png");
+  background: url("../../asserts/me.png");
   background-size: contain;
   box-shadow: 0 5px 5px rgba(55, 55, 55, 0.4);
 }
@@ -102,5 +103,8 @@
     background: #fff;
     box-shadow: 0 0 4px rgb(55 55 55 / 30%);
     border-radius: 5px;
+  }
+  .aboutme {
+    background-position: center;
   }
 }

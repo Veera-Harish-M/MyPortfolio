@@ -4,8 +4,8 @@ import {
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
-import Atlan from "../../asserts/atlan2.png";
-import Logo from "../../asserts/logo.png";
+
+import Logo from "../../asserts/nitpy_logo.png";
 
 import { FaNodeJs, FaReact } from "react-icons/fa";
 import { TbBrandReactNative } from "react-icons/tb";
@@ -44,8 +44,7 @@ export default function Timeline() {
   return (
     <div
       style={{
-        background: `url(${Atlan})`,
-        "--line-color": "transparent",
+        "--line-color": "rgb(154 184 229 / 75%)",
       }}
       className="TimelineClass"
     >

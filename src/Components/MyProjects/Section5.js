@@ -12,7 +12,7 @@ export default class Section5 extends Component {
         >
           <img
             className="image1"
-            src={require("../../asserts/mobile123.png")}
+            src={require("../../asserts/project/section5/section6-mobile1.png")}
             alt="project-Image1"
           />
         </div>
@@ -23,7 +23,7 @@ export default class Section5 extends Component {
         >
           <img
             className="image2"
-            src={require("../../asserts/mobile1231.png")}
+            src={require("../../asserts/project/section5/section6-mobile2.png")}
             alt="project-Image2"
           />
         </div>
@@ -34,7 +34,7 @@ export default class Section5 extends Component {
         >
           <img
             className="image3"
-            src={require("../../asserts/mobile1232.png")}
+            src={require("../../asserts/project/section5/section6-mobile3.png")}
             alt="project-Image3"
           />
         </div>
@@ -45,7 +45,7 @@ export default class Section5 extends Component {
         >
           <img
             className="image4"
-            src={require("../../asserts/mobile1233.png")}
+            src={require("../../asserts/project/section5/section6-mobile4.png")}
             alt="project-Image4"
           />
         </div>
@@ -56,7 +56,7 @@ export default class Section5 extends Component {
         >
           <img
             className="image5"
-            src={require("../../asserts/mobile1234.png")}
+            src={require("../../asserts/project/section5/section6-mobile5.png")}
             alt="project-Image5"
           />
         </div>
@@ -67,7 +67,7 @@ export default class Section5 extends Component {
         >
           <img
             className="image6"
-            src={require("../../asserts/mobile1235.png")}
+            src={require("../../asserts/project/section5/section6-mobile6.png")}
             alt="project-Image6"
           />
         </div>

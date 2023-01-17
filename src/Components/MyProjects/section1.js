@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./section1.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import transcoder from "../../asserts/transcoder.mp4";
+import transcoder from "../../asserts/project/section1/transcoder-video.mp4";
 import { BsGithub } from "react-icons/bs";
 
 export default class Section1 extends Component {
@@ -52,7 +52,7 @@ export default class Section1 extends Component {
               muted
             ></video>
             <img
-              src={require("../../asserts/iphone.png")}
+              src={require("../../asserts/project/section1/iphone-frame.png")}
               alt="app demo-1 border"
               className="iphone-1-border"
             />
@@ -65,12 +65,12 @@ export default class Section1 extends Component {
             className="androidphone"
           >
             <img
-              src={require("../../asserts/trans.jpg")}
+              src={require("../../asserts/project/section1/transcoder-image.jpg")}
               className="androidphone-content"
               alt="iphone Wallpaper"
             />
             <img
-              src={require("../../asserts/androidmobileframe-1.png")}
+              src={require("../../asserts/project/section1/android-frame.png")}
               alt="app demo-2 border"
               className="androidphone-border"
             />

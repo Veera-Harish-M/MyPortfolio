@@ -1,0 +1,41 @@
+.Landing {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: contents;
+}
+.Landing .row {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.Landing .col {
+  margin: 0;
+  padding: 0;
+}
+.Landing img {
+  width: 100%;
+  height: 100%;
+}
+
+.Landing .LandingText {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.Landing .Ltext {
+  font-size: 100px;
+  color: white;
+}
+
+.Landing .LoadingSpinner {
+  color: white;
+  width: 45px;
+  height: 45px;
+  font-size: 25px;
+}

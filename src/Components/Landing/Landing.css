@@ -1,5 +1,15 @@
 .Landing {
   color: white;
+  overflow: hidden;
+}
+
+.Landing .splineDiv {
+  width: 70%;
+  height: 93%;
+  position: absolute;
+  top: 7%;
+  opacity: 74%;
+  right: 0px;
 }
 
 .Landing .typing-effect-text {
@@ -41,6 +51,12 @@
 }
 
 .Landing .allText {
+  width: 100%;
+  height: 100vh;
+  background: url("../../asserts/backgrounds/landing.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
   -webkit-animation: animatedBackground 2s ease-in-out infinite;
   animation: animatedBackground 2s ease-in-out infinite alternate;
 }
@@ -95,7 +111,7 @@
   }
 
   .Landing .text-effect-box {
-    margin-top: 70% !important;
+    margin-top: 58% !important;
   }
 
   .Landing .name-text1 {
@@ -104,6 +120,20 @@
 
   .Landing .name-text {
     font-size: 2.5rem !important;
+  }
+  .Landing .allText {
+    background: url("../../asserts/backgrounds/landing-mobile.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  .Landing .splineDiv {
+    width: 157%;
+    height: 52%;
+    position: absolute;
+    top: 50%;
+    opacity: 74%;
+    right: 0;
   }
 }
 

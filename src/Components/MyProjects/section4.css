@@ -2,6 +2,9 @@
   position: relative;
   height: 200vh;
   overflow: hidden;
+  background: url("../../asserts/backgrounds/section4.png");
+  background-size: cover;
+  background-attachment: fixed;
 }
 .section4 .projectNameText .textTrans {
   font-size: 95px;
@@ -33,6 +36,7 @@
   }
   .section4 {
     height: 120vh;
+    background-position: center;
   }
   .section4 .projectNameText {
     margin-top: 293px;

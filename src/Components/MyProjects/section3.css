@@ -1,6 +1,9 @@
 .section3 {
   position: relative;
   height: 200vh;
+  background: url("../../asserts/backgrounds/section3.png");
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 .section3 .projectText {

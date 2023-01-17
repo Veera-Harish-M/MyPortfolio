@@ -1,6 +1,9 @@
 .section2 {
   position: relative;
   height: 200vh;
+  background: url("../../asserts/backgrounds/section2.png");
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 .section2 .phoneOne {
@@ -37,6 +40,10 @@
 @media only screen and (max-width: 500px) {
   .section2 {
     height: 230vh;
+    background: url("../../asserts/backgrounds/section2.png");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
   }
   .section2 .phoneOne {
     width: 200px;

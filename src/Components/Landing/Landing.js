@@ -1,27 +1,12 @@
-// import Spline from "@splinetool/react-spline";
+import Spline from "@splinetool/react-spline";
 
 import ReactTypingEffect from "react-typing-effect";
 import "./Landing.css";
-import back1 from "../../asserts/b1.png";
-import back2 from "../../asserts/b2.png";
-import back3 from "../../asserts/b3.png";
-import back4 from "../../asserts/b4.png";
-import back from "../../asserts/backship2.png";
 
 export default function Landing() {
   return (
     <div className="Landing">
-      <div
-        className="allText"
-        style={{
-          width: "100%",
-          height: "100vh",
-          backgroundImage: `url(${back1}),url(${back2}),url(${back3}),url(${back4}),url(${back})`,
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "cover",
-          backgroundAttachment: "fixed",
-        }}
-      >
+      <div className="allText">
         <div className="text-effect-box">
           <h1 className="name-text">I'm Veera Harish</h1>
           <h1 className="name-text1">I'm Veera Harish</h1>
@@ -43,7 +28,9 @@ export default function Landing() {
           />
         </div>
 
-        {/* <Spline scene="https://draft.spline.design/WBT5Oifjwvkl6IPJ/scene.splinecode" /> */}
+        <div className="splineDiv">
+          <Spline scene="https://prod.spline.design/aEFkVSb5NI1piSHi/scene.splinecode" />
+        </div>
       </div>
     </div>
   );

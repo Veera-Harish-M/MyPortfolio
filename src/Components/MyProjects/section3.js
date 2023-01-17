@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import printer from "../../asserts/printer.mp4";
+import printer from "../../asserts/project/section3/section3-video.mp4";
 import { BsGithub } from "react-icons/bs";
 import "./section3.css";
 export default class Section3 extends Component {
