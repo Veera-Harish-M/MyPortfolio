@@ -1,4 +1,4 @@
-import Spline from "@splinetool/react-spline";
+// import Spline from "@splinetool/react-spline";
 
 import ReactTypingEffect from "react-typing-effect";
 import "./Landing.css";
@@ -28,9 +28,9 @@ export default function Landing() {
           />
         </div>
 
-        <div className="splineDiv">
+        {/* <div className="splineDiv">
           <Spline scene="https://prod.spline.design/aEFkVSb5NI1piSHi/scene.splinecode" />
-        </div>
+        </div> */}
       </div>
     </div>
   );
