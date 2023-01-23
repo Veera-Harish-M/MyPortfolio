@@ -2,10 +2,15 @@ import React, { Component } from "react";
 import printer from "../../asserts/project/section3/section3-video.mp4";
 import { BsGithub } from "react-icons/bs";
 import "./section3.css";
+import BackgroundSection3 from "../../asserts/backgrounds/section3.png";
+
 export default class Section3 extends Component {
   render() {
     return (
-      <div className="section3">
+      <div
+        className="section3"
+        style={{ backgroundImage: `url(${BackgroundSection3})` }}
+      >
         <video
           style={{ width: "100%" }}
           src={printer}

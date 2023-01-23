@@ -5,6 +5,10 @@ import {
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 
+import BackgroundTimeline from "../../asserts/backgrounds/timeline.png";
+
+import BackgroundTimelineMin from "../../asserts/backgrounds/timeline-mobile.png";
+
 import Logo from "../../asserts/nitpy_logo.png";
 
 import { FaNodeJs, FaReact } from "react-icons/fa";
@@ -43,9 +47,17 @@ export default function Timeline() {
 
   return (
     <div
-      style={{
-        "--line-color": "rgb(154 184 229 / 75%)",
-      }}
+      style={
+        window.innerWidth < 450
+          ? {
+              "--line-color": "rgb(154 184 229 / 75%)",
+              backgroundImage: `url(${BackgroundTimelineMin})`,
+            }
+          : {
+              "--line-color": "rgb(154 184 229 / 75%)",
+              backgroundImage: `url(${BackgroundTimeline})`,
+            }
+      }
       className="TimelineClass"
     >
       <div className="title">Life of Veera</div>

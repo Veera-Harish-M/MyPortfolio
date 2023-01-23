@@ -1,11 +1,15 @@
 import React, { Component } from "react";
 import "./section2.css";
 import { BsGithub } from "react-icons/bs";
+import BackgroundSection2 from "../../asserts/backgrounds/section2.png";
 
 export class Section2 extends Component {
   render() {
     return (
-      <div className="section2">
+      <div
+        className="section2"
+        style={{ backgroundImage: `url(${BackgroundSection2})` }}
+      >
         <div data-aos="fade-up-right" data-aos-duration="2000">
           <img
             className="phoneOne"

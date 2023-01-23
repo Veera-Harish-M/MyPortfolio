@@ -53,7 +53,6 @@
 .Landing .allText {
   width: 100%;
   height: 100vh;
-  background: url("../../asserts/backgrounds/landing.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -122,7 +121,6 @@
     font-size: 2.5rem !important;
   }
   .Landing .allText {
-    background: url("../../asserts/backgrounds/landing-mobile.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;

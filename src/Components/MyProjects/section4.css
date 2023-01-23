@@ -2,7 +2,6 @@
   position: relative;
   height: 200vh;
   overflow: hidden;
-  background: url("../../asserts/backgrounds/section4.png");
   background-size: cover;
   background-attachment: fixed;
 }

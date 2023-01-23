@@ -1,5 +1,7 @@
 import React from "react";
 import "./banner.css";
+import BackGroundBanner from "../../asserts/backgrounds/banner.png";
+import BackgroundBannerMin from "../../asserts/backgrounds/banner-mobile.png";
 
 export default function Banner() {
   const position = document.documentElement;
@@ -9,7 +11,14 @@ export default function Banner() {
 
   return (
     <section className="sectionClass">
-      <div className="background-video"></div>
+      <div
+        style={
+          window.innerWidth < 450
+            ? { backgroundImage: `url(${BackgroundBannerMin})` }
+            : { backgroundImage: `url(${BackGroundBanner})` }
+        }
+        className="background-video"
+      ></div>
       <div className="text">
         <h2 style={{ "--i": "0.5" }}>
           <span>Let's Deep Dive</span>

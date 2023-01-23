@@ -2,7 +2,6 @@
   display: flex;
   flex-direction: column;
   position: relative;
-  background: url("../../asserts/backgrounds/projects.png");
   background-size: cover;
   background-attachment: fixed;
 }
@@ -21,7 +20,6 @@
 
 @media only screen and (max-width: 450px) {
   .myProjects {
-    background: url("../../asserts/backgrounds/projects-mobile.png");
     background-size: cover;
     background-attachment: fixed;
     background-position: center;

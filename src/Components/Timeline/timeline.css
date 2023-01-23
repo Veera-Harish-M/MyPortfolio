@@ -15,7 +15,6 @@
 }
 
 .TimelineClass {
-  background: url("../../asserts/backgrounds/timeline.png");
   background-size: cover !important;
   background-attachment: fixed !important;
   width: 100%;
@@ -23,7 +22,6 @@
 
 @media only screen and (max-width: 450px) {
   .TimelineClass {
-    background: url("../../asserts/backgrounds/timeline-mobile.png");
     background-position: center !important;
   }
 

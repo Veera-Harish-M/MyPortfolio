@@ -1,7 +1,8 @@
 import "./App.css";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import AnimatedCursor from "react-animated-cursor";
 import Loading from "./Components/Loading/Loading";
+import { Suspense } from "react";
 
 const MyprojectsComponent = React.lazy(() =>
   import("./Components/MyProjects/Myprojects")
@@ -21,15 +22,8 @@ const LandingComponent = React.lazy(() =>
 );
 
 export default function App() {
-  const [loading, setLoading] = useState(true);
-  useEffect(() => {
-    setTimeout(() => {
-      setLoading(false);
-    }, 6000);
-  }, []);
-  if (loading === true) return <Loading />;
-  else
-    return (
+  return (
+    <Suspense fallback={<Loading />}>
       <div style={{ width: "100%" }}>
         <AnimatedCursor
           innerSize={20}
@@ -46,5 +40,6 @@ export default function App() {
         <MyprojectsComponent />
         <AboutMeComponent />
       </div>
-    );
+    </Suspense>
+  );
 }

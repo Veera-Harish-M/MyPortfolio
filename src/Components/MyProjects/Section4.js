@@ -1,10 +1,14 @@
 import React, { Component } from "react";
 import { BsGithub, BsFillArrowUpRightCircleFill } from "react-icons/bs";
 import "./section4.css";
+import BackgroundSection4 from "../../asserts/backgrounds/section4.png";
 export default class Section4 extends Component {
   render() {
     return (
-      <div className="section4">
+      <div
+        className="section4"
+        style={{ backgroundImage: `url(${BackgroundSection4})` }}
+      >
         <div
           data-aos="fade-up-right"
           data-aos-duration="1000"

@@ -1,8 +1,14 @@
 import React from "react";
 import "./Section6.css";
+
+import BackgroundSection6 from "../../asserts/backgrounds/section6.png";
+
 export default function Section6() {
   return (
-    <div className="section6">
+    <div
+      className="section6"
+      style={{ backgroundImage: `url(${BackgroundSection6})` }}
+    >
       <div
         className="projectTextName"
         data-aos="fade-up"

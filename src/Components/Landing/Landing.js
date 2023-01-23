@@ -1,12 +1,24 @@
 import Spline from "@splinetool/react-spline";
-
+import { React } from "react";
 import ReactTypingEffect from "react-typing-effect";
 import "./Landing.css";
+import LandingBackground from "../../asserts/backgrounds/landing.png";
+import LandingBackgroundMin from "../../asserts/backgrounds/landing-mobile.png";
+
+const splineUrl =
+  "https://prod.spline.design/aEFkVSb5NI1piSHi/scene.splinecode";
 
 export default function Landing() {
   return (
     <div className="Landing">
-      <div className="allText">
+      <div
+        className="allText"
+        style={
+          window.innerWidth < 450
+            ? { backgroundImage: `url(${LandingBackgroundMin})` }
+            : { backgroundImage: `url(${LandingBackground})` }
+        }
+      >
         <div className="text-effect-box">
           <h1 className="name-text">I'm Veera Harish</h1>
           <h1 className="name-text1">I'm Veera Harish</h1>
@@ -29,7 +41,7 @@ export default function Landing() {
         </div>
         {window.innerWidth > 700 && (
           <div className="splineDiv">
-            <Spline scene="https://prod.spline.design/aEFkVSb5NI1piSHi/scene.splinecode" />
+            <Spline scene={splineUrl} />
           </div>
         )}
       </div>

@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import Footer from "../Footer/Footer";
 import "./AboutMe.css";
-
+import BackgroundAboutMe from "../../asserts/backgrounds/aboutme.png";
+import MyPhoto from "../../asserts/me.png";
 export default class AboutMe extends Component {
   render() {
     return (
@@ -14,9 +15,10 @@ export default class AboutMe extends Component {
           display: "flex",
           flexDirection: "column",
           backgroundColor: "blue",
+          backgroundImage: `url(${BackgroundAboutMe})`,
         }}
       >
-        <div className="wrapper">
+        <div className="wrapper" style={{ backgroundImage: `url(${MyPhoto})` }}>
           <div className="name">Veera Harish</div>
           <div className="content">
             <h2>About me</h2>

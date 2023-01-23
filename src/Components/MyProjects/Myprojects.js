@@ -7,9 +7,18 @@ import Section4 from "./Section4";
 import Section5 from "./Section5";
 import Section6 from "./Section6";
 
+import BackgroundProject from "../../asserts/backgrounds/projects.png";
+import BackgroundProjectMin from "../../asserts/backgrounds/projects-mobile.png";
 export default function Myprojects() {
   return (
-    <div className="myProjects">
+    <div
+      style={
+        window.innerWidth < 450
+          ? { backgroundImage: `url(${BackgroundProjectMin})` }
+          : { backgroundImage: `url(${BackgroundProject})` }
+      }
+      className="myProjects"
+    >
       <Section1 />
       <Section2 />
       <Section3 />
