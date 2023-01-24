@@ -26,24 +26,32 @@ const LandingComponent = React.lazy(() =>
 export default function App() {
   const [compVisibility, setCompVisibility] = useState(false);
   useEffect(() => {
-    setInterval(() => {
-      if (
-        document
-          .getElementsByClassName("splineDiv")[0]
-          .getElementsByTagName("canvas")[0].style.display === "block"
-      ) {
-        setTimeout(() => {}, 1000);
-        setCompVisibility(true);
-      }
-    }, 1000);
+    if (window.innerWidth > 700) {
+      setInterval(() => {
+        if (
+          document
+            .getElementsByClassName("splineDiv")[0]
+            .getElementsByTagName("canvas")[0].style.display === "block"
+        ) {
+          setTimeout(() => {}, 1000);
+          setCompVisibility(true);
+        }
+      }, 1000);
+    }
     // eslint-disable-next-line
   }, []);
 
   return (
     <Suspense fallback={<Loading />}>
-      {!compVisibility && <Loading />}
+      {window.innerWidth > 700 && !compVisibility && <Loading />}
       <div
-        style={compVisibility ? {} : { visibility: "hidden" }}
+        style={
+          window.innerWidth > 700
+            ? compVisibility
+              ? {}
+              : { visibility: "hidden" }
+            : {}
+        }
         className="App"
       >
         <AnimatedCursor
