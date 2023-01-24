@@ -4,9 +4,7 @@ import ReactTypingEffect from "react-typing-effect";
 import "./Landing.css";
 import LandingBackground from "../../asserts/backgrounds/landing.png";
 import LandingBackgroundMin from "../../asserts/backgrounds/landing-mobile.png";
-
-const splineUrl =
-  "https://prod.spline.design/aEFkVSb5NI1piSHi/scene.splinecode";
+import SplineFile from "../../asserts/scene.splinecode";
 
 export default function Landing() {
   return (
@@ -41,7 +39,7 @@ export default function Landing() {
         </div>
         {window.innerWidth > 700 && (
           <div className="splineDiv">
-            <Spline scene={splineUrl} />
+            <Spline scene={SplineFile} />
           </div>
         )}
       </div>
