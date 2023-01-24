@@ -3,6 +3,8 @@ import React from "react";
 import AnimatedCursor from "react-animated-cursor";
 import Loading from "./Components/Loading/Loading";
 import { Suspense } from "react";
+import { useEffect } from "react";
+import { useState } from "react";
 
 const MyprojectsComponent = React.lazy(() =>
   import("./Components/MyProjects/Myprojects")
@@ -22,9 +24,28 @@ const LandingComponent = React.lazy(() =>
 );
 
 export default function App() {
+  const [compVisibility, setCompVisibility] = useState(false);
+  useEffect(() => {
+    setInterval(() => {
+      if (
+        document
+          .getElementsByClassName("splineDiv")[0]
+          .getElementsByTagName("canvas")[0].style.display === "block"
+      ) {
+        setTimeout(() => {}, 1000);
+        setCompVisibility(true);
+      }
+    }, 1000);
+    // eslint-disable-next-line
+  }, []);
+
   return (
     <Suspense fallback={<Loading />}>
-      <div className="App">
+      {!compVisibility && <Loading />}
+      <div
+        style={compVisibility ? {} : { visibility: "hidden" }}
+        className="App"
+      >
         <AnimatedCursor
           innerSize={20}
           outerSize={40}
