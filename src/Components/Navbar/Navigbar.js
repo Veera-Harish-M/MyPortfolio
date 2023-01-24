@@ -5,12 +5,6 @@ import Navbar from "react-bootstrap/Navbar";
 import "./Navigbar.css";
 
 export default function Navigbar() {
-  const ProjectSpot = document.getElementById("ProjectSpot");
-  const ExperienceSpot = document.getElementById("ExperienceSpot");
-  const AboutSpot = document.getElementById("AboutSpot");
-  const ContactSpot = document.getElementById("ContactSpot");
-  const HomeSpot = document.getElementById("HomeSpot");
-
   return (
     <div>
       <Navbar
@@ -22,13 +16,7 @@ export default function Navigbar() {
       >
         <Container>
           <Navbar.Brand
-            onClick={() =>
-              HomeSpot.scrollIntoView({
-                behavior: "smooth",
-                block: "start",
-                inline: "nearest",
-              })
-            }
+            onClick={() => document.getElementById("HomeSpot").scrollIntoView()}
           >
             {"{"} Veera {"}"}
           </Navbar.Brand>
@@ -38,11 +26,7 @@ export default function Navigbar() {
               <div
                 className="navText"
                 onClick={() =>
-                  ProjectSpot.scrollIntoView({
-                    behavior: "smooth",
-                    block: "start",
-                    inline: "nearest",
-                  })
+                  document.getElementById("ProjectSpot").scrollIntoView()
                 }
               >
                 . myWorks ( )
@@ -50,11 +34,7 @@ export default function Navigbar() {
               <div
                 className="navText"
                 onClick={() =>
-                  ExperienceSpot.scrollIntoView({
-                    behavior: "smooth",
-                    block: "start",
-                    inline: "nearest",
-                  })
+                  document.getElementById("ExperienceSpot").scrollIntoView()
                 }
               >
                 . TimeLine ( )
@@ -64,11 +44,7 @@ export default function Navigbar() {
               <div
                 className="navText"
                 onClick={() =>
-                  AboutSpot.scrollIntoView({
-                    behavior: "smooth",
-                    block: "start",
-                    inline: "nearest",
-                  })
+                  document.getElementById("AboutSpot").scrollIntoView()
                 }
               >
                 . about ( )
@@ -76,11 +52,7 @@ export default function Navigbar() {
               <div
                 className="navText"
                 onClick={() =>
-                  ContactSpot.scrollIntoView({
-                    behavior: "smooth",
-                    block: "start",
-                    inline: "nearest",
-                  })
+                  document.getElementById("ContactSpot").scrollIntoView()
                 }
               >
                 . contact ( )
