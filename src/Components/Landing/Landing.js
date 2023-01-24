@@ -10,7 +10,7 @@ const splineUrl =
 
 export default function Landing() {
   return (
-    <div className="Landing">
+    <div className="Landing" id="HomeSpot">
       <div
         className="allText"
         style={

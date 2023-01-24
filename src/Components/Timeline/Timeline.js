@@ -59,6 +59,7 @@ export default function Timeline() {
             }
       }
       className="TimelineClass"
+      id="ExperienceSpot"
     >
       <div className="title">Life of Veera</div>
       <VerticalTimeline>

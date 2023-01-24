@@ -4,7 +4,12 @@
   padding: 0;
   width: 100%;
   display: contents;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
+
 .Landing .row {
   margin: 0;
   padding: 0;

@@ -1,14 +1,24 @@
-
-.navbarCust{
-	position: absolute;
-	background-color: transparent !important;
-	align-items: flex-end;
-	
-	
+.navbarCust {
+  position: absolute;
+  background-color: transparent !important;
+  align-items: flex-end;
 }
 
-.navbarCust a{
-	color:white !important;
-	margin-left: 20px;
-	
+.navbarCust a {
+  color: white !important;
+  margin-left: 20px;
+}
+
+.navText {
+  display: block;
+  padding: var(--bs-nav-link-padding-y) var(--bs-nav-link-padding-x);
+  font-size: var(--bs-nav-link-font-size);
+  font-weight: var(--bs-nav-link-font-weight);
+  color: var(--bs-nav-link-color);
+  text-decoration: none;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out;
+  color: white !important;
+  margin-left: 20px;
+  cursor: none;
 }

@@ -4,7 +4,7 @@ import "./footer.css";
 export default class Footer extends Component {
   render() {
     return (
-      <div className="footer">
+      <div className="footer" id="ContactSpot">
         <div
           style={{
             position: "absolute",
@@ -19,20 +19,20 @@ export default class Footer extends Component {
           </b>
         </div>
 
-        <div class="social">
+        <div className="social">
           <a
             href="https://twitter.com/veeraharishm"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <i id="twitter" class="icon-twitter"></i>
+            <i id="twitter" className="icon-twitter"></i>
           </a>
           <a
             href="https://github.com/Veera-Harish-M"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <i id="github" class="icon-github"></i>
+            <i id="github" className="icon-github"></i>
           </a>
 
           <a
@@ -40,28 +40,28 @@ export default class Footer extends Component {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <i id="linkedin" class="icon-linkedin-sign"></i>
+            <i id="linkedin" className="icon-linkedin-sign"></i>
           </a>
           <a
             href="https://www.facebook.com/veeraharish.muthazgu"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <i id="facebook" class="icon-facebook"></i>
+            <i id="facebook" className="icon-facebook"></i>
           </a>
           <a
             href="https://www.instagram.com/veeraharishmuthalagu/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <i id="instagram" class="icon-instagram"></i>
+            <i id="instagram" className="icon-instagram"></i>
           </a>
           <a
             href="mailto:veeraharishmuthazhagu@gmail.com?subject=Hi"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <i id="mail" class="icon-envelope"></i>
+            <i id="mail" className="icon-envelope"></i>
           </a>
         </div>
       </div>

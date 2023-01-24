@@ -18,6 +18,7 @@ export default function Myprojects() {
           : { backgroundImage: `url(${BackgroundProject})` }
       }
       className="myProjects"
+      id="ProjectSpot"
     >
       <Section1 />
       <Section2 />

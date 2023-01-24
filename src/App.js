@@ -24,7 +24,7 @@ const LandingComponent = React.lazy(() =>
 export default function App() {
   return (
     <Suspense fallback={<Loading />}>
-      <div style={{ width: "100%" }}>
+      <div className="App">
         <AnimatedCursor
           innerSize={20}
           outerSize={40}

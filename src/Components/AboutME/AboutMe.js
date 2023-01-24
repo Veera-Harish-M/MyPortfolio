@@ -8,6 +8,7 @@ export default class AboutMe extends Component {
     return (
       <div
         className="aboutme"
+        id="AboutSpot"
         style={{
           width: "100%",
           position: "absolute",
