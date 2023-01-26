@@ -63,6 +63,22 @@ export default class Footer extends Component {
           >
             <i id="mail" className="icon-envelope"></i>
           </a>
+          <a
+            onClick={(e) => {
+              e.preventDefault();
+              window.open(
+                "https://drive.google.com/file/d/1FZIGplihOZAigRTxT6KLFJoL-vTOCtnM/view?usp=share_link"
+              );
+              window.open(
+                "https://drive.google.com/file/d/154Kjutw13QONUh8TeKjWxpwbSg5MvYn2/view?usp=share_link"
+              );
+            }}
+            href="/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i id="file" className="icon-file-text"></i>
+          </a>
         </div>
       </div>
     );

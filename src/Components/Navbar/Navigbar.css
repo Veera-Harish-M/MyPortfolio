@@ -1,7 +1,7 @@
 .navbarCust {
-  position: absolute;
-  background-color: transparent !important;
+  background-color: transparent;
   align-items: flex-end;
+  transition: all 0.5s;
 }
 
 .navbarCust a {
