@@ -22,3 +22,6 @@
   margin-left: 20px;
   cursor: none;
 }
+.fixed-top {
+  z-index: 5 !important;
+}
