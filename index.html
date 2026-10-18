@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Veera Harish Muthazhagu — Full-Stack AI/ML Engineer. Generative AI, LLMs, RAG, MLOps and full-stack engineering." />
+  <title>Veera Harish Muthazhagu — Full-Stack AI/ML Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Ambient futuristic background -->
+  <div class="bg-canvas" aria-hidden="true">
+    <div class="aurora aurora-1"></div>
+    <div class="aurora aurora-2"></div>
+    <div class="aurora aurora-3"></div>
+    <div class="grid-overlay"></div>
+    <div class="noise"></div>
+  </div>
+
+  <!-- Scroll-interactive 3D (WebGL) layer -->
+  <canvas id="scene3d" aria-hidden="true"></canvas>
+
+  <!-- Custom cursor -->
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-ring" aria-hidden="true"></div>
+
+  <!-- Scroll progress -->
+  <div class="scroll-progress" aria-hidden="true"></div>
+
+  <!-- Navigation -->
+  <header class="nav" id="nav">
+    <a href="#home" class="brand">
+      <span class="brand-bracket">{</span> VH <span class="brand-bracket">}</span>
+    </a>
+    <nav class="nav-links">
+      <a href="#about" class="nav-link">about</a>
+      <a href="#process" class="nav-link">process</a>
+      <a href="#skills" class="nav-link">skills</a>
+      <a href="#experience" class="nav-link">journey</a>
+      <a href="#projects" class="nav-link">work</a>
+      <a href="#research" class="nav-link">research</a>
+      <a href="#contact" class="nav-link">contact</a>
+    </nav>
+    <a href="#contact" class="nav-cta">Let's Talk</a>
+    <button class="nav-burger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  </header>
+
+  <main>
+    <!-- ML/DL mini-charts scattered in the background -->
+    <div class="ml-bg" aria-hidden="true">
+      <div class="ml-chart cy" style="top:4%; left:4%;">
+        <svg viewBox="0 0 100 60"><path class="axis" d="M6,54 H96 M6,8 V54"/><path class="curve" stroke="currentColor" d="M6,54 L50,54 L94,10"/></svg>
+        <span class="ml-chart-label">ReLU</span>
+      </div>
+      <div class="ml-chart vi" style="top:8%; right:5%;">
+        <svg viewBox="0 0 100 60"><path class="axis" d="M6,54 H96 M6,8 V54"/><path class="curve" stroke="currentColor" d="M6,50 C36,50 40,12 94,12"/></svg>
+        <span class="ml-chart-label">Sigmoid σ</span>
+      </div>
+      <div class="ml-chart mg" style="top:12%; left:14%;">
+        <svg viewBox="0 0 100 60"><path class="axis" d="M6,54 H96 M6,8 V54"/><path class="curve" stroke="currentColor" d="M6,12 C24,46 48,50 94,52"/></svg>
+        <span class="ml-chart-label">Loss ↓</span>
+      </div>
+      <div class="ml-chart vi" style="top:11%; right:16%;">
+        <svg viewBox="0 0 100 60"><path class="axis" d="M6,54 H96 M6,8 V54"/><path class="muted" d="M6,22 C34,46 64,50 94,51"/><path class="curve" stroke="currentColor" d="M6,24 C32,40 50,44 66,43 C80,42 88,28 94,18"/></svg>
+        <span class="ml-chart-label">Train / Val</span>
+      </div>
+      <div class="ml-chart cy" style="top:17%; left:6%;">
+        <svg viewBox="0 0 100 60"><path class="axis" d="M6,54 H96 M6,8 V54"/><path class="muted" d="M6,42 L94,22"/><circle class="dot" cx="20" cy="30" r="2"/><circle class="dot" cx="34" cy="26" r="2"/><circle class="dot" cx="48" cy="35" r="2"/><circle class="dot" cx="62" cy="22" r="2"/><circle class="dot" cx="76" cy="31" r="2"/><circle class="dot" cx="88" cy="19" r="2"/></svg>
+        <span class="ml-chart-label">Underfit</span>
+      </div>
+      <div class="ml-chart mg" style="top:21%; right:4%;">
+        <svg viewBox="0 0 100 60"><path class="axis" d="M6,54 H96 M6,8 V54"/><path class="curve" stroke="currentColor" d="M6,44 L18,22 L30,41 L42,18 L54,39 L66,20 L78,37 L90,15"/><circle class="dot" cx="18" cy="22" r="1.8"/><circle class="dot" cx="42" cy="18" r="1.8"/><circle class="dot" cx="66" cy="20" r="1.8"/><circle class="dot" cx="90" cy="15" r="1.8"/></svg>
+        <span class="ml-chart-label">Overfit</span>
+      </div>
+      <div class="ml-chart cy" style="top:26%; left:9%;">
+        <svg viewBox="0 0 100 60"><path class="axis" d="M6,54 H96 M6,8 V54"/><path class="curve" stroke="currentColor" d="M6,44 C30,20 64,20 94,42"/><circle class="dot" cx="22" cy="34" r="1.8"/><circle class="dot" cx="40" cy="26" r="1.8"/><circle class="dot" cx="60" cy="26" r="1.8"/><circle class="dot" cx="78" cy="35" r="1.8"/></svg>
+        <span class="ml-chart-label">Good Fit</span>
+      </div>
+      <div class="ml-chart vi" style="top:30%; right:7%;">
+        <svg viewBox="0 0 100 60"><path class="axis" d="M6,54 H96 M6,8 V54"/><path class="muted" d="M6,54 L94,10" stroke-dasharray="3 3"/><path class="curve" stroke="currentColor" d="M6,54 C18,20 50,12 94,10"/></svg>
+        <span class="ml-chart-label">ROC · AUC</span>
+      </div>
+      <div class="ml-chart cy" style="top:34%; left:5%;">
+        <svg viewBox="0 0 100 60"><path class="axis" d="M6,54 H96 M6,8 V54"/><path class="curve" stroke="currentColor" d="M6,50 C40,50 44,16 70,15 C84,14 88,15 94,15"/></svg>
+        <span class="ml-chart-label">Accuracy ↑</span>
+      </div>
+      <div class="ml-chart mg" style="top:33%; right:15%;">
+        <svg viewBox="0 0 100 60"><path class="axis" d="M6,54 H96 M6,8 V54"/><path class="muted" d="M6,52 C34,30 64,24 94,40"/><path class="curve" stroke="currentColor" d="M6,16 C30,52 70,52 94,16"/></svg>
+        <span class="ml-chart-label">Bias · Variance</span>
+      </div>
+      <div class="ml-chart vi" style="top:39%; left:7%;">
+        <svg viewBox="0 0 100 60"><path class="axis" d="M6,54 H96 M6,8 V54"/><path class="curve" stroke="currentColor" d="M6,47 C28,53 40,42 50,36 C64,27 76,12 94,10"/></svg>
+        <span class="ml-chart-label">GELU</span>
+      </div>
+      <div class="ml-chart cy" style="top:43%; right:5%;">
+        <svg viewBox="0 0 100 60"><path class="axis" d="M6,54 H96 M6,8 V54"/><path class="curve" stroke="currentColor" d="M6,49 Q34,49 50,30 Q66,11 94,11"/></svg>
+        <span class="ml-chart-label">tanh</span>
+      </div>
+      <div class="ml-chart mg" style="top:47%; left:12%;">
+        <svg viewBox="0 0 100 60"><path class="axis" d="M6,54 H96 M6,8 V54"/><path class="curve" stroke="currentColor" d="M6,52 C34,52 38,12 50,12 C62,12 66,52 94,52"/></svg>
+        <span class="ml-chart-label">Gaussian</span>
+      </div>
+      <div class="ml-chart vi" style="top:50%; right:8%;">
+        <svg viewBox="0 0 100 60"><path class="axis" d="M6,54 H96 M6,8 V54"/><path class="curve" stroke="currentColor" d="M6,14 C40,14 60,40 94,50"/></svg>
+        <span class="ml-chart-label">Precision · Recall</span>
+      </div>
+      <div class="ml-chart cy" style="top:54%; left:5%;">
+        <svg viewBox="0 0 100 60"><path class="axis" d="M6,54 H96 M6,8 V54"/><path class="curve" stroke="currentColor" d="M6,14 Q50,60 94,14"/><circle class="dot" cx="22" cy="34" r="1.8"/><circle class="dot" cx="34" cy="44" r="1.8"/><circle class="dot" cx="50" cy="49" r="1.8"/><circle class="dot" cx="66" cy="44" r="1.8"/></svg>
+        <span class="ml-chart-label">Grad Descent</span>
+      </div>
+      <div class="ml-chart mg" style="top:57%; right:14%;">
+        <svg viewBox="0 0 100 60"><path class="axis" d="M6,54 H96 M6,8 V54"/><path class="muted" d="M6,48 C30,30 60,24 94,22"/><path class="curve" stroke="currentColor" d="M6,52 C34,40 64,30 94,26"/></svg>
+        <span class="ml-chart-label">Learning</span>
+      </div>
+      <div class="ml-chart cy" style="top:61%; left:8%;">
+        <svg viewBox="0 0 100 60"><rect class="cell" x="30" y="12" width="20" height="18" fill-opacity="0.85"/><rect class="cell" x="52" y="12" width="20" height="18" fill-opacity="0.2"/><rect class="cell" x="30" y="32" width="20" height="18" fill-opacity="0.25"/><rect class="cell" x="52" y="32" width="20" height="18" fill-opacity="0.8"/></svg>
+        <span class="ml-chart-label">Confusion</span>
+      </div>
+      <div class="ml-chart mg" style="top:65%; right:6%;">
+        <svg viewBox="0 0 100 60"><rect class="cell" x="18" y="10" width="15" height="12" fill-opacity="0.3"/><rect class="cell" x="34" y="10" width="15" height="12" fill-opacity="0.7"/><rect class="cell" x="50" y="10" width="15" height="12" fill-opacity="0.25"/><rect class="cell" x="66" y="10" width="15" height="12" fill-opacity="0.5"/><rect class="cell" x="18" y="24" width="15" height="12" fill-opacity="0.6"/><rect class="cell" x="34" y="24" width="15" height="12" fill-opacity="0.9"/><rect class="cell" x="50" y="24" width="15" height="12" fill-opacity="0.35"/><rect class="cell" x="66" y="24" width="15" height="12" fill-opacity="0.2"/><rect class="cell" x="18" y="38" width="15" height="12" fill-opacity="0.45"/><rect class="cell" x="34" y="38" width="15" height="12" fill-opacity="0.25"/><rect class="cell" x="50" y="38" width="15" height="12" fill-opacity="0.8"/><rect class="cell" x="66" y="38" width="15" height="12" fill-opacity="0.55"/></svg>
+        <span class="ml-chart-label">Attention</span>
+      </div>
+      <div class="ml-chart cy" style="top:69%; left:6%;">
+        <svg viewBox="0 0 100 60"><path class="axis" d="M6,54 H96 M6,8 V54"/><circle class="dot" cx="22" cy="20" r="2"/><circle class="dot" cx="28" cy="26" r="2"/><circle class="dot" cx="20" cy="30" r="2"/><circle class="dot" cx="60" cy="18" r="2"/><circle class="dot" cx="66" cy="24" r="2"/><circle class="dot" cx="58" cy="26" r="2"/><circle class="dot" cx="46" cy="46" r="2"/><circle class="dot" cx="52" cy="44" r="2"/><circle class="dot" cx="44" cy="40" r="2"/></svg>
+        <span class="ml-chart-label">k-Means</span>
+      </div>
+      <div class="ml-chart vi" style="top:73%; right:5%;">
+        <svg viewBox="0 0 100 60"><path class="axis" d="M6,54 H96 M6,8 V54"/><rect class="bar" x="18" y="40" width="12" height="14" fill-opacity="0.6"/><rect class="bar" x="36" y="30" width="12" height="24" fill-opacity="0.75"/><rect class="bar" x="54" y="16" width="12" height="38" fill-opacity="0.95"/><rect class="bar" x="72" y="44" width="12" height="10" fill-opacity="0.5"/></svg>
+        <span class="ml-chart-label">Softmax</span>
+      </div>
+      <div class="ml-chart mg" style="top:78%; left:7%;">
+        <svg viewBox="0 0 100 60"><path class="axis" d="M6,54 H96 M6,8 V54"/><rect class="bar" x="16" y="14" width="11" height="40" fill-opacity="0.85"/><rect class="bar" x="32" y="24" width="11" height="30" fill-opacity="0.7"/><rect class="bar" x="48" y="32" width="11" height="22" fill-opacity="0.55"/><rect class="bar" x="64" y="40" width="11" height="14" fill-opacity="0.4"/><rect class="bar" x="80" y="46" width="11" height="8" fill-opacity="0.3"/></svg>
+        <span class="ml-chart-label">Epoch Loss</span>
+      </div>
+      <div class="ml-chart cy" style="top:82%; right:13%;">
+        <svg viewBox="0 0 100 60"><path class="axis" d="M6,54 H96 M6,8 V54"/><path class="curve" stroke="currentColor" d="M20,8 C40,24 60,36 84,52"/><circle class="dot" cx="30" cy="18" r="1.8"/><circle class="dot" cx="26" cy="30" r="1.8"/><circle class="dot" cx="70" cy="30" r="1.8"/><circle class="dot" cx="74" cy="44" r="1.8"/></svg>
+        <span class="ml-chart-label">Boundary</span>
+      </div>
+      <div class="ml-chart vi" style="top:86%; left:5%;">
+        <svg viewBox="0 0 100 60"><path class="axis" d="M6,54 H96 M6,8 V54"/><path class="curve" stroke="currentColor" d="M6,50 L50,46 L94,10"/></svg>
+        <span class="ml-chart-label">Leaky ReLU</span>
+      </div>
+      <div class="ml-chart mg" style="top:90%; right:7%;">
+        <svg viewBox="0 0 100 60"><path class="axis" d="M6,54 H96 M6,8 V54"/><path class="muted" d="M6,52 C26,52 30,20 44,20 C58,20 62,52 72,52"/><path class="curve" stroke="currentColor" d="M34,52 C50,52 54,16 68,16 C82,16 86,52 94,52"/></svg>
+        <span class="ml-chart-label">Class Dist</span>
+      </div>
+      <div class="ml-chart cy" style="top:94%; left:12%;">
+        <svg viewBox="0 0 100 60"><path class="axis" d="M6,54 H96 M6,8 V54"/><path class="curve" stroke="currentColor" d="M6,30 C22,18 30,18 40,30 C50,42 58,42 68,30 C78,18 86,18 94,30"/></svg>
+        <span class="ml-chart-label">Embedding</span>
+      </div>
+    </div>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="hero-inner">
+        <p class="hero-eyebrow reveal">
+          <span class="pulse-dot"></span> Available for what's next
+        </p>
+        <h1 class="hero-title">
+          <span class="line reveal">Veera Harish</span>
+          <span class="line gradient-text reveal">Muthazhagu</span>
+        </h1>
+        <p class="hero-tagline reveal">Deep Learning Aficionado · Unravelling the magic of neural nets</p>
+        <div class="hero-role reveal">
+          <span class="role-prefix">&gt;</span>
+          <span class="typed" id="typed"></span><span class="caret">_</span>
+        </div>
+        <p class="hero-sub reveal">
+          Full-Stack <strong>AI/ML Engineer</strong> crafting production-grade
+          Generative&nbsp;AI, LLM &amp; MLOps systems — from architecture to release.
+        </p>
+        <div class="hero-actions reveal">
+          <a href="#projects" class="btn btn-primary">
+            <span>Explore Work</span>
+            <svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="#contact" class="btn btn-ghost">Get in Touch</a>
+        </div>
+        <div class="hero-stats reveal">
+          <div class="stat"><span class="stat-num" data-count="3">0</span><span class="stat-plus">+</span><span class="stat-label">Years<br>Experience</span></div>
+          <div class="stat-divider"></div>
+          <div class="stat"><span class="stat-num" data-count="5">0</span><span class="stat-label">Research<br>Publications</span></div>
+          <div class="stat-divider"></div>
+          <div class="stat"><span class="stat-num" data-count="11">0</span><span class="stat-plus">+</span><span class="stat-label">Projects<br>Shipped</span></div>
+        </div>
+      </div>
+      <div class="hero-orb" aria-hidden="true">
+        <div class="orb-ring r1"></div>
+        <div class="orb-ring r2"></div>
+        <div class="orb-ring r3"></div>
+        <div class="orb-core"></div>
+      </div>
+      <a href="#about" class="scroll-cue" aria-label="Scroll down">
+        <span class="scroll-mouse"><span class="scroll-wheel"></span></span>
+        <span class="scroll-text">scroll</span>
+      </a>
+    </section>
+
+    <!-- Marquee -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Generative AI</span><span class="dot">✦</span>
+        <span>LLMs &amp; RAG</span><span class="dot">✦</span>
+        <span>MLOps</span><span class="dot">✦</span>
+        <span>LangChain</span><span class="dot">✦</span>
+        <span>FastAPI</span><span class="dot">✦</span>
+        <span>Kubernetes</span><span class="dot">✦</span>
+        <span>React &amp; Angular</span><span class="dot">✦</span>
+        <span>MLflow</span><span class="dot">✦</span>
+        <span>Deep Learning</span><span class="dot">✦</span>
+        <span>Generative AI</span><span class="dot">✦</span>
+        <span>LLMs &amp; RAG</span><span class="dot">✦</span>
+        <span>MLOps</span><span class="dot">✦</span>
+        <span>LangChain</span><span class="dot">✦</span>
+        <span>FastAPI</span><span class="dot">✦</span>
+        <span>Kubernetes</span><span class="dot">✦</span>
+        <span>React &amp; Angular</span><span class="dot">✦</span>
+        <span>MLflow</span><span class="dot">✦</span>
+        <span>Deep Learning</span><span class="dot">✦</span>
+      </div>
+    </div>
+
+    <!-- ABOUT -->
+    <section class="section about" id="about">
+      <div class="section-head reveal">
+        <span class="section-index">01</span>
+        <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p class="lead">
+            I'm a Full-Stack AI/ML Engineer with <strong>3+ years</strong> turning
+            complex ideas into scalable, production-ready systems — spanning solution
+            design, development, team leadership, deployment and release management.
+          </p>
+          <p>
+            My work lives at the intersection of <strong>Generative AI, LLMs, RAG and
+            MLOps</strong> and modern full-stack engineering. I've taken features from
+            ground-up development through major production releases, owning the full
+            lifecycle: architecture, delivery, troubleshooting and continuous improvement.
+          </p>
+          <p>
+            A published researcher in AI &amp; ML, I thrive on rapidly adopting new
+            technologies, leading teams, and driving technical decisions that ship
+            high-priority features on tight timelines.
+          </p>
+          <div class="about-facts">
+            <div class="fact"><span class="fact-key">Based in</span><span class="fact-val">Bengaluru, India</span></div>
+            <div class="fact"><span class="fact-key">Role</span><span class="fact-val">SWE / Tech Lead @ ABB</span></div>
+            <div class="fact"><span class="fact-key">Focus</span><span class="fact-val">GenAI · LLMs · MLOps</span></div>
+            <div class="fact"><span class="fact-key">Degree</span><span class="fact-val">M.Tech CSE · NIT Puducherry</span></div>
+          </div>
+        </div>
+        <aside class="about-card reveal">
+          <div class="about-card-glow"></div>
+          <div class="terminal">
+            <div class="terminal-bar">
+              <span class="tdot red"></span><span class="tdot amber"></span><span class="tdot green"></span>
+              <span class="terminal-title">veera@portfolio: ~</span>
+            </div>
+            <pre class="terminal-body"><span class="tl"><span class="tp">➜</span> whoami</span>
+<span class="tc">Veera Harish Muthazhagu</span>
+<span class="tl"><span class="tp">➜</span> cat role.txt</span>
+<span class="tc">Full-Stack AI/ML Engineer</span>
+<span class="tl"><span class="tp">➜</span> stack --list</span>
+<span class="tc">Python · TypeScript · FastAPI</span>
+<span class="tc">React · Angular · Node.js</span>
+<span class="tc">LangChain · MLflow · Docker</span>
+<span class="tc">Kubernetes · Azure · MongoDB</span>
+<span class="tl"><span class="tp">➜</span> status</span>
+<span class="tok">● building the future_</span></pre>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- LIFECYCLE / PROCESS -->
+    <section class="section process" id="process">
+      <div class="section-head reveal">
+        <span class="section-index">02</span>
+        <h2 class="section-title">How I <span class="gradient-text">Build</span></h2>
+        <p class="section-lead reveal">End-to-end ownership — an endless loop of shipping, learning and improving.</p>
+      </div>
+
+      <div class="loop-wrap reveal">
+        <svg class="loop-svg" viewBox="0 0 900 400" role="img" aria-label="Software engineering lifecycle infinity loop">
+          <defs>
+            <linearGradient id="loopGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#35e0f0"/>
+              <stop offset="50%" stop-color="#8b5cff"/>
+              <stop offset="100%" stop-color="#ff4fd8"/>
+            </linearGradient>
+            <filter id="loopGlow" x="-40%" y="-40%" width="180%" height="180%">
+              <feGaussianBlur stdDeviation="6" result="b"/>
+              <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+            </filter>
+          </defs>
+
+          <!-- Faint full track -->
+          <path class="loop-track" d="M450,200 C450,90 310,90 230,130 C110,190 110,210 230,270 C310,310 450,310 450,200 C450,90 590,90 670,130 C790,190 790,210 670,270 C590,310 450,310 450,200 Z"/>
+          <!-- Animated glowing stroke -->
+          <path class="loop-flow" d="M450,200 C450,90 310,90 230,130 C110,190 110,210 230,270 C310,310 450,310 450,200 C450,90 590,90 670,130 C790,190 790,210 670,270 C590,310 450,310 450,200 Z"/>
+          <!-- Traveling comet -->
+          <circle class="loop-comet" r="8">
+            <animateMotion dur="9s" repeatCount="indefinite" rotate="auto"
+              path="M450,200 C450,90 310,90 230,130 C110,190 110,210 230,270 C310,310 450,310 450,200 C450,90 590,90 670,130 C790,190 790,210 670,270 C590,310 450,310 450,200 Z"/>
+          </circle>
+        </svg>
+
+        <!-- Stage nodes positioned over the loop -->
+        <ul class="loop-stages">
+          <li class="stage tip-down" style="--sx:14%; --sy:28%; --i:0" tabindex="0">
+            <span class="stage-dot"></span>
+            <span class="stage-icon">🧭</span>
+            <span class="stage-name">Requirements</span>
+            <span class="stage-desc">Gather &amp; scope</span>
+            <span class="stage-tip">I translate ambiguous business problems into concrete AI/ML solution architecture — scoping GenAI &amp; MLOps features directly with architects and stakeholders.</span>
+          </li>
+          <li class="stage tip-up" style="--sx:28%; --sy:76%; --i:1" tabindex="0">
+            <span class="stage-dot"></span>
+            <span class="stage-icon">✦</span>
+            <span class="stage-name">Design</span>
+            <span class="stage-desc">Architect the solution</span>
+            <span class="stage-tip">I design across every layer — frontend, backend, ML, infra &amp; deployment — with FastAPI, MLflow, RAG, LangChain and Kubernetes, built to scale from day one.</span>
+          </li>
+          <li class="stage tip-down" style="--sx:50%; --sy:12%; --i:2" tabindex="0">
+            <span class="stage-dot"></span>
+            <span class="stage-icon">⌘</span>
+            <span class="stage-name">Develop</span>
+            <span class="stage-desc">Build &amp; test</span>
+            <span class="stage-tip">Ground-up feature development with full ownership — ML inference, model-lifecycle workflows and full-stack capabilities, adopting new frameworks fast.</span>
+          </li>
+          <li class="stage tip-up" style="--sx:72%; --sy:76%; --i:3" tabindex="0">
+            <span class="stage-dot"></span>
+            <span class="stage-icon">🚀</span>
+            <span class="stage-name">Deploy</span>
+            <span class="stage-desc">Release to prod</span>
+            <span class="stage-tip">I own major production releases end-to-end — versioning, async processing, release coordination and post-deploy validation across cloud and edge.</span>
+          </li>
+          <li class="stage tip-down" style="--sx:86%; --sy:28%; --i:4" tabindex="0">
+            <span class="stage-dot"></span>
+            <span class="stage-icon">◉</span>
+            <span class="stage-name">Monitor</span>
+            <span class="stage-desc">Maintain &amp; observe</span>
+            <span class="stage-tip">Observability with OpenTelemetry, Prometheus &amp; Grafana — model monitoring, drift &amp; distributed tracing. I keep systems healthy, not just shipped.</span>
+          </li>
+          <li class="stage stage-center tip-up" style="--sx:50%; --sy:52%; --i:5" tabindex="0">
+            <span class="stage-dot"></span>
+            <span class="stage-icon">∞</span>
+            <span class="stage-name">Fix &amp; Iterate</span>
+            <span class="stage-desc">Next feature, repeat</span>
+            <span class="stage-tip">Root-cause analysis, bug resolution and continuous improvement — then I mentor the team and spin up the next feature. The loop never stops.</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="loop-legend reveal">
+        <span>Requirements</span><span class="arrow">→</span>
+        <span>Design</span><span class="arrow">→</span>
+        <span>Develop</span><span class="arrow">→</span>
+        <span>Deploy</span><span class="arrow">→</span>
+        <span>Monitor</span><span class="arrow">→</span>
+        <span>Fix</span><span class="arrow">↺</span>
+        <span class="legend-loop">∞ repeat</span>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section skills" id="skills">
+      <div class="section-head reveal">
+        <span class="section-index">03</span>
+        <h2 class="section-title">Core <span class="gradient-text">Arsenal</span></h2>
+      </div>
+      <div class="skills-grid">
+        <article class="skill-card reveal">
+          <div class="skill-icon">✦</div>
+          <h3>Generative AI &amp; LLMs</h3>
+          <ul class="chips">
+            <li>Generative AI</li><li>LLMs</li><li>RAG</li><li>LangChain</li>
+            <li>Embeddings</li><li>Vectorization</li><li>Prompt Engineering</li>
+            <li>Document Processing</li>
+          </ul>
+        </article>
+        <article class="skill-card reveal">
+          <div class="skill-icon">◈</div>
+          <h3>AI/ML &amp; MLOps</h3>
+          <ul class="chips">
+            <li>Machine Learning</li><li>Deep Learning</li><li>MLOps</li><li>MLflow</li>
+            <li>Model Deployment</li><li>Model Monitoring</li><li>Model Registry</li>
+            <li>Time-Series</li>
+          </ul>
+        </article>
+        <article class="skill-card reveal">
+          <div class="skill-icon">⬡</div>
+          <h3>Full-Stack Development</h3>
+          <ul class="chips">
+            <li>Python</li><li>TypeScript</li><li>JavaScript</li><li>Angular</li>
+            <li>React</li><li>Node.js</li><li>Express.js</li><li>FastAPI</li>
+            <li>REST</li><li>Microservices</li>
+          </ul>
+        </article>
+        <article class="skill-card reveal">
+          <div class="skill-icon">▤</div>
+          <h3>Data &amp; Analytics</h3>
+          <ul class="chips">
+            <li>ETL</li><li>SQL Server</li><li>MongoDB</li><li>Redis</li>
+            <li>Pandas</li><li>NumPy</li><li>Tableau</li>
+          </ul>
+        </article>
+        <article class="skill-card reveal">
+          <div class="skill-icon">◉</div>
+          <h3>Observability</h3>
+          <ul class="chips">
+            <li>OpenTelemetry</li><li>Prometheus</li><li>Grafana</li>
+            <li>Distributed Tracing</li><li>Logging</li><li>Perf Optimization</li>
+          </ul>
+        </article>
+        <article class="skill-card reveal">
+          <div class="skill-icon">☁</div>
+          <h3>Cloud &amp; DevOps</h3>
+          <ul class="chips">
+            <li>Azure</li><li>Kubernetes</li><li>Docker</li><li>Helm</li>
+            <li>AKS</li><li>CI/CD</li><li>GitHub Actions</li><li>Control-M</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="section experience" id="experience">
+      <div class="section-head reveal">
+        <span class="section-index">04</span>
+        <h2 class="section-title">The <span class="gradient-text">Journey</span></h2>
+      </div>
+      <div class="timeline">
+        <div class="timeline-line"></div>
+
+        <div class="tl-item reveal">
+          <div class="tl-node"></div>
+          <div class="tl-date">Aug 2024 — Present</div>
+          <div class="tl-card">
+            <div class="tl-card-glow"></div>
+            <h3>Software Engineer / Tech Lead</h3>
+            <span class="tl-org">ABB · Bengaluru</span>
+            <p class="tl-project"><span class="tl-project-label">ABB Ability Genix Model Fabric</span> — an enterprise MLOps platform orchestrating ML workflows across cloud &amp; edge: model registry, pipeline orchestration, recommendation, inference and monitoring. Built with Python FastAPI/Celery microservices, Angular apps, a Go scheduler, and Kubernetes/Helm deployments.</p>
+            <p>Progressed from IC to Tech Lead, owning complex enterprise features across AI/ML, GenAI, MLOps and full-stack. Architected scalable GenAI platform capabilities (FastAPI, MLflow, ONNX, RAG, LangChain), built ML inference &amp; model-lifecycle workflows, mentored a team from the ground up, and owned major releases and production fixes end-to-end.</p>
+          </div>
+        </div>
+
+        <div class="tl-item reveal">
+          <div class="tl-node"></div>
+          <div class="tl-date">Sep 2023 — Jul 2024</div>
+          <div class="tl-card">
+            <div class="tl-card-glow"></div>
+            <h3>Data Science Intern</h3>
+            <span class="tl-org">ABB · Bengaluru</span>
+            <p>Developed and evaluated ML solutions and data-science workflows in Python. Worked on MLOps, model orchestration, deployment and ML lifecycle, integrating data-science solutions into enterprise production applications.</p>
+          </div>
+        </div>
+
+        <div class="tl-item reveal">
+          <div class="tl-node"></div>
+          <div class="tl-date">May 2021 — Aug 2022</div>
+          <div class="tl-card">
+            <div class="tl-card-glow"></div>
+            <h3>Assistant System Engineer Trainee</h3>
+            <span class="tl-org">Tata Consultancy Services · Kochi</span>
+            <p>Supported the Analytics &amp; Insights unit in enterprise reporting. Executed EDL jobs and data-processing workflows, built business reports with visualization/analytics tooling, and resolved operational issues across reporting pipelines.</p>
+          </div>
+        </div>
+
+        <div class="tl-item reveal">
+          <div class="tl-node"></div>
+          <div class="tl-date">Apr 2021 — May 2021</div>
+          <div class="tl-card">
+            <div class="tl-card-glow"></div>
+            <h3>React Native Developer Intern</h3>
+            <span class="tl-org">Codesirpi Software LLP</span>
+            <p>Built cross-platform mobile interfaces with React Native, implementing UI components and enhancements focused on usability and user experience.</p>
+          </div>
+        </div>
+
+        <div class="tl-item reveal">
+          <div class="tl-node"></div>
+          <div class="tl-date">Jul 2020 — Sep 2020</div>
+          <div class="tl-card">
+            <div class="tl-card-glow"></div>
+            <h3>Full-Stack Developer Intern</h3>
+            <span class="tl-org">ezPalate · Singapore</span>
+            <p>Designed and developed an e-commerce food-delivery platform on the MERN stack, building frontend and backend components across the full development stack.</p>
+          </div>
+        </div>
+
+        <div class="tl-item reveal">
+          <div class="tl-node"></div>
+          <div class="tl-date">Apr 2020 — Jul 2020</div>
+          <div class="tl-card">
+            <div class="tl-card-glow"></div>
+            <h3>Front-End Developer Intern</h3>
+            <span class="tl-org">Steerclear Tech Solutions · Chennai</span>
+            <p>Developed a B2B bulk-purchase portal for the fashion sector (CAWACH initiative), building responsive MERN-stack frontend components.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Education -->
+      <div class="edu-grid">
+        <div class="edu-card reveal">
+          <div class="edu-badge">M.Tech</div>
+          <h3>Computer Science &amp; Engineering</h3>
+          <span class="edu-org">National Institute of Technology, Puducherry</span>
+          <div class="edu-meta"><span>2022 — 2024</span><span class="edu-cgpa">CGPA 9.32</span></div>
+        </div>
+        <div class="edu-card reveal">
+          <div class="edu-badge">B.E</div>
+          <h3>Computer Science &amp; Engineering</h3>
+          <span class="edu-org">Saranathan College of Engineering, Tiruchirappalli</span>
+          <div class="edu-meta"><span>2017 — 2021</span><span class="edu-cgpa">CGPA 8.61</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section projects" id="projects">
+      <div class="section-head reveal">
+        <span class="section-index">05</span>
+        <h2 class="section-title">Selected <span class="gradient-text">Work</span></h2>
+      </div>
+
+      <h3 class="subgroup reveal">Flagship — Enterprise Platform</h3>
+      <div class="projects-grid">
+        <article class="project-card featured flagship reveal">
+          <div class="project-tag">ABB · MLOps Platform</div>
+          <h3>ABB Ability Genix Model Fabric</h3>
+          <p>Enterprise MLOps platform orchestrating &amp; operating machine-learning workflows across cloud and edge — unifying model registry, pipeline orchestration, recommendation, inference and monitoring. Engineered with Python FastAPI/Celery microservices, Angular applications, a Go scheduler, and Kubernetes/Helm deployments.</p>
+          <div class="project-stack"><span>FastAPI</span><span>Celery</span><span>Angular</span><span>Go</span><span>Kubernetes</span><span>Helm</span><span>MLflow</span></div>
+        </article>
+      </div>
+
+      <h3 class="subgroup reveal">AI / ML &amp; Software</h3>
+      <div class="projects-grid">
+        <article class="project-card featured reveal">
+          <div class="project-tag">CNN · Runner-Up</div>
+          <h3>SortGenie — Waste Classification</h3>
+          <p>A CNN-based solution for automated waste classification. Runner-Up at Pragyan'24, NIT-Trichy.</p>
+          <div class="project-stack"><span>CNN</span><span>Python</span><span>Computer Vision</span></div>
+        </article>
+        <article class="project-card reveal">
+          <div class="project-tag">Python · Finalist</div>
+          <h3>Voice-IDE</h3>
+          <p>An automated programming IDE converting voice &amp; keyboard input into generated code across multiple languages. Finalist, Pragyan'21.</p>
+          <div class="project-stack"><span>Python</span><span>NLP</span><span>Speech</span></div>
+        </article>
+        <article class="project-card reveal">
+          <div class="project-tag">Android · CSI InApp'19</div>
+          <h3>Transcoder</h3>
+          <p>Real-time offline VoLTE call and message translation application built for Android.</p>
+          <div class="project-stack"><span>Java</span><span>Android</span><span>Realtime</span></div>
+        </article>
+        <article class="project-card reveal">
+          <div class="project-tag">EfficientNet-B4</div>
+          <h3>Deepfake Detection</h3>
+          <p>Image-based deepfake detection system powered by an EfficientNet-B4 backbone.</p>
+          <div class="project-stack"><span>EfficientNet</span><span>Deep Learning</span></div>
+        </article>
+        <article class="project-card reveal">
+          <div class="project-tag">R-CNN</div>
+          <h3>Fish Larvae Counting</h3>
+          <p>Computer-vision solution for automated fish-larvae detection and counting using Region-based CNNs.</p>
+          <div class="project-stack"><span>R-CNN</span><span>Detection</span></div>
+        </article>
+        <article class="project-card reveal">
+          <div class="project-tag">LSTM</div>
+          <h3>Air Quality Index Prediction</h3>
+          <p>An LSTM-based time-series model forecasting the air quality index.</p>
+          <div class="project-stack"><span>LSTM</span><span>Time-Series</span></div>
+        </article>
+        <article class="project-card reveal">
+          <div class="project-tag">MobileNetV2</div>
+          <h3>Fish Disease Detection</h3>
+          <p>Image-classification model for fish-disease detection built on MobileNetV2.</p>
+          <div class="project-stack"><span>MobileNetV2</span><span>Classification</span></div>
+        </article>
+      </div>
+
+      <h3 class="subgroup reveal">Company Hackathons</h3>
+      <div class="projects-grid">
+        <article class="project-card reveal">
+          <div class="project-tag">Guardrails · Runner-Up</div>
+          <h3>Real-Time Model Governance</h3>
+          <p>Real-time model-governance concept implementing guardrails for responsible, controlled ML model usage. Runner-Up.</p>
+          <div class="project-stack"><span>Governance</span><span>MLOps</span></div>
+        </article>
+        <article class="project-card reveal">
+          <div class="project-tag">Finalist</div>
+          <h3>Proactive &amp; Intelligent Model Management</h3>
+          <p>Intelligent model management combining Active Learning, AutoML and Champion/Challenger deployment strategies.</p>
+          <div class="project-stack"><span>AutoML</span><span>Active Learning</span></div>
+        </article>
+        <article class="project-card reveal">
+          <div class="project-tag">Federated</div>
+          <h3>Fleet Federated Learning</h3>
+          <p>Federated-learning system for industrial predictive maintenance, enabling distributed training across fleet environments.</p>
+          <div class="project-stack"><span>Federated Learning</span><span>Predictive Maintenance</span></div>
+        </article>
+        <article class="project-card reveal">
+          <div class="project-tag">Resilience</div>
+          <h3>Failure-Aware Auto-Stabilization Engine</h3>
+          <p>Intelligent stabilization approach detecting system failures and automatically initiating corrective actions to improve resilience.</p>
+          <div class="project-stack"><span>Self-Healing</span><span>Automation</span></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- RESEARCH -->
+    <section class="section research" id="research">
+      <div class="section-head reveal">
+        <span class="section-index">06</span>
+        <h2 class="section-title">Research &amp; <span class="gradient-text">Publications</span></h2>
+      </div>
+      <div class="pub-list">
+        <a class="pub reveal" href="https://doi.org/10.1109/IITCEE59897.2024.10467409" target="_blank" rel="noopener noreferrer">
+          <span class="pub-venue">IITCEE 2024</span>
+          <h3>Exploring the Role of AI in Web Design and Development: A Voyage Through Automated Code Generation</h3>
+          <span class="pub-meta">DOI: 10.1109/IITCEE59897.2024.10467409 <span class="pub-arrow">↗</span></span>
+        </a>
+        <a class="pub reveal" href="https://drive.google.com/file/d/1eZZNxvclFTXzQLfuElNHmLjbbiDHZ_yC/view" target="_blank" rel="noopener noreferrer">
+          <span class="pub-venue">IRJMETS 2022</span>
+          <h3>Automating Application Development by Processing User Commands</h3>
+          <span class="pub-meta">Volume 4, Issue 3 · March 2022 <span class="pub-arrow">↗</span></span>
+        </a>
+        <a class="pub reveal" href="https://ieeexplore.ieee.org/document/10811701" target="_blank" rel="noopener noreferrer">
+          <span class="pub-venue">IEEE Xplore</span>
+          <h3>Deep Learning-Based Osteoarthritis Severity Classification from Radiographic Images (X-Ray)</h3>
+          <span class="pub-meta">IEEE Conference Publication <span class="pub-arrow">↗</span></span>
+        </a>
+        <a class="pub reveal" href="https://link.springer.com/chapter/10.1007/978-3-031-77075-3_21" target="_blank" rel="noopener noreferrer">
+          <span class="pub-venue">Springer</span>
+          <h3>Comparative Analysis of Mice Protein Expression Data: Assessing Genotype &amp; Behavioral Treatments Using ML</h3>
+          <span class="pub-meta">Springer Nature Link <span class="pub-arrow">↗</span></span>
+        </a>
+        <a class="pub reveal" href="https://ieeexplore.ieee.org/document/10627914" target="_blank" rel="noopener noreferrer">
+          <span class="pub-venue">IEEE Xplore</span>
+          <h3>Navigating the AI Landscape: A Comparative Study of Models, Applications, and Emerging Trends</h3>
+          <span class="pub-meta">IEEE Conference Publication <span class="pub-arrow">↗</span></span>
+        </a>
+      </div>
+
+      <h3 class="subgroup reveal">Certifications</h3>
+      <div class="cert-grid">
+        <div class="cert reveal">MTA · Python Programming</div>
+        <div class="cert reveal">IIT Bombay · Python Fundamentals</div>
+        <div class="cert reveal">IIT Bombay · Java Fundamentals</div>
+        <div class="cert reveal">Oracle · Java Fundamentals</div>
+        <div class="cert reveal">HackerRank · Python &amp; React</div>
+        <div class="cert reveal">Udemy · React.js</div>
+        <div class="cert reveal">Udemy · Data Modeling</div>
+        <div class="cert reveal">Hadoop Ecosystem Masterclass</div>
+        <div class="cert reveal">Tableau · Intermediate</div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section contact" id="contact">
+      <div class="contact-inner reveal">
+        <span class="section-index center">07</span>
+        <h2 class="contact-title">Let's have a <span class="gradient-text">Coffee</span>!</h2>
+        <p class="contact-sub">
+          Open to roles &amp; collaborations in AI/ML, GenAI and full-stack engineering.
+          <br/>Grabbing your <span class="coffee">cup</span>?
+        </p>
+        <a href="mailto:veeraharishchitra@gmail.com?subject=Hello%20Veera" class="contact-mail">veeraharishchitra@gmail.com</a>
+        <p class="contact-meta">Bengaluru, Karnataka, India</p>
+        <div class="contact-socials">
+          <a href="https://github.com/Veera-Harish-M" target="_blank" rel="noopener noreferrer" class="social-btn">GitHub</a>
+          <a href="https://in.linkedin.com/in/veeraharishmuthazhagu" target="_blank" rel="noopener noreferrer" class="social-btn">LinkedIn</a>
+          <a href="https://twitter.com/veeraharishm" target="_blank" rel="noopener noreferrer" class="social-btn">Twitter</a>
+          <a href="Veera_Harish_Resume.pdf" download class="social-btn social-btn-primary">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>
+            Download Resume
+          </a>
+        </div>
+      </div>
+      <footer class="footer">
+        <span>© <span id="year"></span> Veera Harish Muthazhagu</span>
+        <span class="footer-made">Designed &amp; built with pure CSS ✦</span>
+      </footer>
+    </section>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="scene3d.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
